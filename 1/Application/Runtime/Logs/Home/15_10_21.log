@@ -1,0 +1,384 @@
+[ 2015-10-21T00:01:23+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2015-10-21T00:01:24+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001520s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2015-10-21T00:01:52+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001768s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001042s ]
+
+[ 2015-10-21T00:01:53+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2015-10-21T00:02:11+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010766s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001287s ]
+
+[ 2015-10-21T00:02:12+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-10-21T00:03:44+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2015-10-21T00:03:45+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.1005s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-10-21T00:05:12+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001024s ]
+
+[ 2015-10-21T00:05:12+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-10-21T00:09:32+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001933s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000386s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001273s ]
+
+[ 2015-10-21T00:09:32+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-10-21T00:10:09+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2015-10-21T00:10:09+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-10-21T00:12:17+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001607s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009746s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001157s ]
+
+[ 2015-10-21T00:12:19+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001649s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-10-21T00:12:30+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001764s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2015-10-21T00:12:30+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001833s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-10-21T00:12:54+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002518s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001576s ]
+
+[ 2015-10-21T00:12:54+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001602s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-10-21T00:13:27+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001196s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009373s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2015-10-21T00:13:28+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0216s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2015-10-21T00:15:21+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 239 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2015-10-21T00:15:22+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/20"  ) LIMIT 1   [ RunTime:0.0007s ]
+

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width" />
+		<title>34枚金币</title>
+	
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+			<link rel="stylesheet" href="__PUBLIC__/Css/jquery.mobile-1.3.2.my.css" />
+		<!--<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
+		<script type="text/javascript" src="__PUBLIC__/Js/jquery.min.js" ></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script>
+    //创建cookie的函数
+	function setCookie(c_name,value,expiredays){
+		var exdate=new Date();
+		exdate.setDate(exdate.getDate()+expiredays);
+		document.cookie=c_name+ "=" +escape(value)+
+		((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+	}
+	 //获取cookie
+	function getCookie(c_name){
+		if (document.cookie.length>0){
+		  c_start=document.cookie.indexOf(c_name + "=");
+		  if (c_start!=-1){ 
+		    c_start=c_start + c_name.length+1 
+		    c_end=document.cookie.indexOf(";",c_start);
+		    if (c_end==-1) c_end=document.cookie.length
+		    return unescape(document.cookie.substring(c_start,c_end));
+		    } 
+		  }
+		return "";
+	}
+  //置顶函数
+	function toTop() {
+			time = (document.body.scrollTop / 4000) * 1000;
+			$("body").animate({
+				scrollTop: 0
+			},
+			time)
+		}
+	
+	//还原原来的状态,去除已经记录的金币的样式
+	function reduction(){
+		var numArr=eval(getCookie('numJson'));		
+		for (var x in numArr) {
+	             //alert(numArr[x]);
+	        	$("div[data-role=collapsible]").eq(numArr[x]).attr("data-theme","c");
+		        $("div[data-role=collapsible]:eq("+numArr[x]+") h1 a").attr("class","ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-c"); 
+		        $("div[data-role=collapsible]:eq("+numArr[x]+") h1 a").attr("data-theme","c");
+	       	    $("div[data-role=collapsible]:eq("+numArr[x]+") textarea").text("");
+	       		$("div[data-role=collapsible]:eq("+numArr[x]+") input:eq(0)").val("");
+	       	   //设置textarea、input为只读属性
+		        $("div[data-role=collapsible]:eq("+numArr[x]+") textarea").removeAttr("readOnly");
+		        $("div[data-role=collapsible]:eq("+numArr[x]+") input:eq(0)").removeAttr("readOnly");
+	            //移除按钮
+	            $("div[data-role=collapsible]:eq("+numArr[x]+") div[id=btn]").css("display","block");
+	            
+	            $("textarea[name=coinDayDes]").val(""); //清空今日小结
+	            $("textarea[name=coinDayDes]").removeAttr("readOnly");
+		}
+	}
+  //添加记录（当用户填写了一部分金币记录之后退出，在当天再次进入时，保持之前的）
+  function addRecord($date){
+  	$.post("__APP__/Home/User/getCoinInformationByJson",
+  	       { opid:'<{$opid}>',
+  	         coinDate:$date
+  	       },  	     
+  	       function(data){	       	      
+  	       	var num;
+  	       	var coinNum=new Array();  //用于储存被记录过得时段的号数
+  	       	var length=data.length; 	       
+  	        for (var x in data) {
+  	             num=data[x].coinnum-1;
+  	             coinNum[x]=num;
+	        	$("div[data-role=collapsible]").eq(num).attr("data-theme",data[x].cointype);
+		        $("div[data-role=collapsible]:eq("+num+") h1 a").attr("class","ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-"+data[x].cointype+""); 
+		        $("div[data-role=collapsible]:eq("+num+") h1 a").attr("data-theme",data[x].cointype);
+	       	    $("div[data-role=collapsible]:eq("+num+") textarea").text(data[x].coindes);
+	       		$("div[data-role=collapsible]:eq("+num+") input:eq(0)").val(data[x].coinlocation);
+	       	   //设置textarea、input为只读属性
+		        $("div[data-role=collapsible]:eq("+num+") textarea").attr("readOnly","true");
+		        $("div[data-role=collapsible]:eq("+num+") input:eq(0)").attr("readOnly","true");
+	            //移除按钮
+	            $("div[data-role=collapsible]:eq("+num+") div[id=btn]").css("display","none");
+  	        }
+  	        if(data[length-1]){
+  	        	$("textarea[name=coinDayDes]").val(data[length-1]); //添加今日小结到小结框中
+  	        	$("textarea[name=coinDayDes]").attr("readOnly","true");
+  	        }
+  	        
+  	        var numJson=JSON.stringify(coinNum); //转化为json数据
+  	        setCookie('numJson',numJson);   //存储于cookie
+  	    });
+    }
+ 
+	//对话框提示
+	function tips(s){		
+		$("div#tips").html("<center>"+s+"</center>");
+		window.location.href="#tips_dialog";
+     }
+	
+	//成功提示
+       function onSuccess(data, status) {  
+            data = $.trim(data);  
+            if(data!="成功更新信息！"){
+            	var newUrl=$("img").attr("src")+'?'+Math.random();
+                  $("img").attr("src",newUrl);
+            }else{
+            	
+            	window.location.href="#renewSuccess";
+            	return false;
+            }
+              tips(data);
+        } 
+        
+        	//成功提示2用于测试
+       function onSuccess2(data, status) {  
+            data = $.trim(data);          
+              tips(data);
+        }
+        
+    //错误提示
+        function onError(data, status)  
+        {  
+            data = $.trim(data);            
+             tips("出错啦！"); 
+        }          
+    
+    //jquery mobile comfirm函数   
+    function isSubmit(num,theme,formData) {
+      var popupDialogId = 'popupDialog';
+     $('<div data-role="popup" id="' + popupDialogId + '" data-confirmed="no" data-transition="pop" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="min-width:216px;max-width:500px;"> \
+                      \
+                      <div role="main" class="ui-content">\
+                          <h3 class="ui-title" style="color:blue; text-align:center;margin-bottom:15px">确认吗？亲(◐_◑)</h3>\
+                          <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b optionConfirm" data-rel="back" style="background: #1784fd;width: 33%;border-radius: 5px;height: 30px;line-height: 30px;padding: 0;font-size: .9em;margin: 0 0 0 12%;font-weight: 100;">确定</a>\
+                         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b optionCancel" data-rel="back" data-transition="flow" style="background: #DBDBDB;width: 33%;border-radius: 5px;height: 30px;line-height: 30px;padding: 0;font-size: .9em;margin: 0 0 0 5%;font-weight: 100;color: #333;text-shadow: none;">取消</a>\
+                      </div>\
+                 </div>')
+         .appendTo($.mobile.pageContainer);
+     var popupDialogObj = $('#' + popupDialogId);
+     popupDialogObj.trigger('create');
+     popupDialogObj.popup({
+         afterclose: function (event, ui) {
+            popupDialogObj.find(".optionConfirm").first().off('click');
+             var isConfirmed = popupDialogObj.attr('data-confirmed') === 'yes' ? true : false;
+             $(event.target).remove();
+             if (isConfirmed) {            	
+                $.post(
+   	     	 	"__APP__/Home/User/receiveCoinText",
+   	     	 	formData
+   	     	 
+   	     	    );
+     	      	 //点击时间分类按钮时触发，关闭打开的折叠框。
+				//第一个collapsible要加上类ui-first-child
+   	      	 if (num==0) {
+					$("div[data-role=collapsible]").eq(num).attr("class","ui-collapsible ui-collapsible-inset ui-collapsible-collapsed ui-first-child");
+				}else{
+					$("div[data-role=collapsible]").eq(num).attr("class","ui-collapsible ui-collapsible-inset ui-collapsible-collapsed");
+				}				
+		        $("div#coin div[data-role=collapsible]:eq("+num+") h1").attr("class","ui-collapsible-heading ui-li-heading ui-collapsible-heading-collapsed");   
+		        $("div#coin div[data-role=collapsible]:eq("+num+") div[class=ui-collapsible-content]").attr(
+		        	{"class":"ui-collapsible-content ui-collapsible-content-collapsed",
+		        	 "aria-hidden":"true"
+		        	});
+		        	
+		        //设置对应的主题，添加对应的类,对应改变可折叠按钮的颜色。
+		        $("div[data-role=collapsible]").eq(num).attr("data-theme",""+theme+"");
+		        $("div[data-role=collapsible]:eq("+num+") h1 a").attr("class","ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-"+theme+""); 
+		        $("div[data-role=collapsible]:eq("+num+") h1 a").attr("data-theme",""+theme+"");
+		        //改变图标，让“^”变成“v”
+		        $("div[data-role=collapsible]:eq("+num+") span[class=ui-btn-inner] span:eq(2)").attr("class","ui-icon ui-icon-shadow ui-icon-arrow-d"); 
+		        
+		        //设置textarea、input为只读属性
+		        $("div[data-role=collapsible]:eq("+num+") textarea").attr("readOnly","true");
+		        $("div[data-role=collapsible]:eq("+num+") input:eq(0)").attr("readOnly","true");
+            //移除按钮
+	            $("div[data-role=collapsible]:eq("+num+") div[id=btn]").remove();
+             }
+         }
+     });
+     popupDialogObj.popup('open');
+     popupDialogObj.find(".optionConfirm").first().on('click', function () {
+         popupDialogObj.attr('data-confirmed', 'yes');
+     });
+}
+    
+    //js 开始执行    
+   $(document).ready(function() {
+     // jQuery.mobile.ajaxEnabled = false; 
+        					
+		//表单提交 ，完善信息
+           $("#submit").click(function(){     
+                var formData = $("#renewForm").serialize();                 
+                //使用ajax提交表单
+                $.ajax({  
+                    type: "POST",  
+                    url: "__URL__/doRenew",  
+                    cache: false,  
+                    data: formData,  
+                    success: onSuccess,  //执行onSuccess()函数
+                    error: onError       //执行onError()函数  
+                });      
+                return false;  
+            });  
+    //循环打印出金币
+     for(var i=0;i<=16;i++){
+     	 var j=i+7;
+         var k=j+1;
+         var n,m;
+         var key1,key2;
+         n=i*2;
+         m=n+1;
+            
+     	$("div#coin").append("<div id='collapsible' data-role='collapsible' data-collapsed='true' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>"+
+     	"<h1>"+j+":00~"+j+":30</h1><form id='"+n+"' action='__APP__/Home/User/receiveCoinText' method='post'><textarea name='coinDes' placeholder='我在做些什么呢……'></textarea><input name='coinLocation' placeholder='地点'/><input type='hidden' name='opid' value='<{$opid}>'/></form>"+
+     	"<div id='btn'><button id='submitCoinText' value='"+n+"' data-inline = 'true' type='l' data-theme='l'>开心的玩</button>"+
+		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='m'          data-theme='m'>休息</button>"+
+		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='n' data-theme='n'>工作/学习</button>"+
+		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='o'   data-theme='o'>被迫忙活</button>"+
+		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='p' data-theme='p'>拖延/浪费</button>"+
+     	"</div></div>");
+     	$("div#coin").append("<div id='collapsible' data-role='collapsible'  data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>"+
+     	"<h1>"+j+":30~"+k+":00</h1><form id='"+m+"' action='__APP__/Home/User/receiveCoinText' method='post'><textarea name='coinDes' placeholder='我在做些什么呢……'></textarea><input name='coinLocation' placeholder='地点'/><input type='hidden' name='opid' value='<{$opid}>'/></form>"+
+     	"<div id='btn'><button id='submitCoinText' value='"+m+"' data-inline = 'true' type='l' data-theme='l'>开心的玩</button>"+
+		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='m'          data-theme='m'>休息</button>"+
+		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='n' data-theme='n'>工作/学习</button>"+
+		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='o'   data-theme='o'>被迫忙活</button>"+
+		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='p' data-theme='p'>拖延/浪费</button>"+
+     	"</div></div>");
+      }
+         
+   addRecord();  //添加记录样式
+    //用户点击时间分类按钮是触发
+   $("button#submitCoinText").click(function(){
+   	             var num=$(this).val();     //num表示第几个折叠框
+   	             var $coinDes,$coinLocation;
+   	             var theme=$(this).attr("data-theme"); //获取对应的主题
+			   	     
+   	            var $coinDes=$("div[data-role=collapsible]:eq("+num+") textarea").val();   //注意：获取元素的文本值时，要加$符号
+   	            var $coinLocation=$("div[data-role=collapsible]:eq("+num+") input:eq(0)").val();
+   	            var $coinAttr=$("div[data-role=collapsible]:eq("+num+") textarea").attr("readOnly"); 
+                 //获取时间段
+                var $timeSlot=$("div[data-role=collapsible]:eq("+num+") h1").text();
+                var $date=$("span#nowRecord").text();            
+   	             if ($coinDes&&$coinLocation&&$coinAttr!="readonly") {	   	             	
+	   	             		var coinType=$(this).attr("type");    //获取金币的类型
+					     	 var formData = $("#"+num+"").serialize();  //获取某个折叠框内金币表单的序列化值（包括coinText,location,opid）
+					   	     var typeKey=parseInt(num)+1;
+					   	     formData=formData+"&coinType="+coinType+"&coinNum="+typeKey+"&timeSlot="+$timeSlot+"&date="+$date;	   	     
+					   	     isSubmit(num,theme,formData);  //判断是否要提交金币内容	
+ 	             } else{
+ 	             	return false;
+ 	             }		   	    
+   	    });
+   	    
+   	    $("button#submitToday").click(function(){
+   	    	var $coinAttr=$("textarea[name=coinDayDes]").attr("readOnly");
+   	    	var $coinDayDes=$("textarea[name=coinDayDes]").val();
+   	    	var $date=$("span#nowRecord").text(); //把日期带过去  	    	
+   	    	if ($coinDayDes&&$coinAttr!="readonly") {
+   	    		var formData = $("#coinDayDes").serialize();
+                 formData=formData+"&date="+$date;
+   	    		 $.post(
+   	     	 	"__APP__/Home/User/saveCoinDayDes",
+   	     	 	formData,
+   	     	     function(data,status){
+   	     	     	tips(data);
+   	     	     	$("textarea[name=coinDayDes]").attr("readOnly","true");
+   	     	     }
+   	     	    );
+   	    	} else{
+   	    		return false;
+   	    	}
+   	    });
+   	    
+   	    //触发日期选择按钮，“跳至当日”
+   	    $("button#date").click(function(){
+   	    	var $selectDate=$("input#dateSelect").val();
+   	    	if ($selectDate) {
+   	    		reduction();
+   	    		addRecord($selectDate); 
+   	    		$("span#nowRecord").text($("input#dateSelect").val());
+   	    	} else{
+   	    		alert("请选择还没记录完的日期");
+   	    	}
+   	    	
+   	    });
+   	    //固定每个page的头部和尾部
+        	$("div[data-role=header]").attr("data-theme","a");
+			$("div[data-role=header]").attr("data-position","fixed");
+			$("div[data-role=footer]").attr("data-theme","a");
+			$("div[data-role=footer]").attr("data-position","fixed");
+ });          
+</script>
+	</head>
+	<body>
+		<div data-role="page" id="homePage">
+
+		  <div data-role="header">
+		  	 <a href="#" data-role="button" data-icon="home">我的记录</a>
+		    <h1>34枚金币主页</h1>
+		  </div>
+				  			
+	    <div data-role="content" id="content" style=" padding: 15px">				
+			<ul data-role="listview" data-inset="true" >
+		      <li>
+			        <a href="#record" data-transition="slide">
+			        <img src="https://dn-coding-net-production-avatar.qbox.me/Fruit-2.png?imageMogr2/thumbnail/80"/>
+			        <h2>记录今天</h2>
+			        <p>早上7点~晚上24点，每半个小时为一枚金币，赶快开始记录自己的时间吧</p>
+			        </a>
+		      </li>
+		      <li>
+			        <a href="__APP__/Home/User/dayRecord?opid=<{$opid}>"  data-ajax="false">
+			        <img src="https://dn-coding-net-production-avatar.qbox.me/Fruit-7.png?imageMogr2/thumbnail/80">
+			        <h2>每日记录</h2>
+			        <p>查看自己某一天的时间记录，还记得那年那天那时你在干嘛吗？</p>
+			        </a>
+		      </li>
+		       <li>
+			        <a href="__APP__/Home/User/weekCoinShow?opid=<{$opid}>"  data-ajax="false">
+			        <img src="https://dn-coding-net-production-avatar.qbox.me/Fruit-8.png?imageMogr2/thumbnail/80">
+			        <h2>一周金币秀</h2>
+			        <p>统计自己过去每一周的时间利用情况</p>
+			        </a>
+		      </li>
+		       <li>
+			        <a href="#">
+			        <img src="https://dn-coding-net-production-avatar.qbox.me/Fruit-9.png?imageMogr2/thumbnail/80">
+			        <h2>金币广场</h2>
+			        <p>看看别人的时间去哪了吧！</p>
+			        </a>
+		      </li>
+		       <li>
+			        <a href="http://m.ac.qq.com">
+			        <img src="https://dn-coding-net-production-avatar.qbox.me/Fruit-6.png?imageMogr2/thumbnail/80">
+			        <h2>漫画时间</h2>
+			        <p>点击进入你的漫画世界吧</p>
+			        </a>
+		      </li>
+		       <li>
+			        <a href="#">
+			        <img src="https://dn-coding-net-production-avatar.qbox.me/Fruit-10.png?imageMogr2/thumbnail/80">
+			        <h2>完善信息</h2>
+			        <p>完善后可以在电脑上查看记录哦！</p>
+			        </a>
+		      </li>
+		    </ul>
+    
+	    </div>
+		
+		  <div data-role="footer" data-position="fixed">
+		    <h1>Time is my life</h1>
+		  </div>
+		
+		</div>
+		
+		<div data-role = "page" id="renew" data-theme="e">
+			<div data-role = "header">
+				<h1>完善信息</h1>
+			</div>
+			
+			<div data-role = "content">
+				<center>关注34金币/时间管理公众号:wyu34coin</center>
+				
+				<form id="renewForm" >			        
+                    <label for="nickname">昵称：</label>  
+                    <input type="text" name="nickname" id="nickname" value=""  />  
+   
+			      <fieldset data-role="controlgroup" >
+			      <legend>性别：</legend>
+			        <label for="male">男</label>
+			        <input type="radio" name="gender" id="male" value="male" checked/>
+			        <label for="female">女</label>
+			        <input type="radio" name="gender" id="female" value="female"/>	
+			      </fieldset>
+   
+                    <label for="password">密码：</label>  
+                    <input type="password" name="password" id="password" value=""/> 
+                    
+                    <label for="pwd">确认密码：</label>  
+                    <input type="password" name="pwd" id="pwd" value=""/> 
+                    
+                    <label for="checkCode">验证码：</label>  
+                    <input type="text" name="checkCode" id="checkCode" value=""/> 
+                    <center>
+                    <img src="__APP__/Home/Public/code" onclick="this.src=this.src+'?'+Math.random()"/><br />         
+                    </center>
+                    <input type="hidden" name="opid" value="<{$opid}>" />
+                    <button data-theme="b" id="submit" type="submit" data-transition="slide">确认</button>  	  
+				</form>
+			</div>			
+			<div data-role = "footer">
+				<h1>34枚金币-登陆管理</h1>
+			</div>			
+		</div>
+		
+		<!--更新信息成功页-->
+		<div data-role = "page" id="renewSuccess">
+			<div data-role = "header">
+				<h1>更新成功</h1>
+			</div>			
+			<div data-role = "content">
+				 <center>关注34金币/时间管理公众号:wyu34coin</center>				
+				 <center><h3>更新成功啦！亲！</h3></center>
+				 <a href="#record" type="button">开始自己的时光记录吧</a>
+			</div>
+			
+			<div data-role = "footer">
+				<h1>34枚金币-登陆管理</h1>
+			</div>			
+		</div>
+		
+		<!--记录今天-->
+		<div data-role = "page" id="record">
+			<div data-role="header">
+				<a href="#homePage" data-transition="slide" data-direction="reverse" data-icon="arrow-l">返回</a>
+				<h1>记录今天 30min = one coin</h1>
+			</div>
+			<div data-role="content">
+				<center>现在是<{$date}><br />
+				您正在记录:<span id="nowRecord"><{$date2}></span>的时间
+				<form>
+				 <div data-role="fieldcontain">
+					<label for="dateSelect">日期:</label>
+					<input type="date" name="dateSelect" id="dateSelect" value="点击选择未记录完的日期"/>
+				</div>
+				</form>	
+				<button id="date">跳至当日</button>
+				</center>
+                  
+				<ul data-role="listview" data-inset="true" >
+				<div data-role="collapsible-set" id="coin">					
+				</div>
+				</ul>
+				
+	              
+	          <div data-role="collapsible">
+				  <h1>今日小结</h1>
+				   <form id="coinDayDes" action='__APP__/Home/User/receiveCoinText' method='post'>
+						<textarea name='coinDayDes' placeholder='小结一下今天过得怎样吧(∩_∩)……'></textarea>
+						<input type='hidden' name='opid' value='<{$opid}>'/>
+				   </form>	
+					<button id="submitToday" data-theme="e">提交</button>
+			  </div>
+			</div>
+			<div data-role="footer">
+				<div data-role="navbar"><ul><li><a onclick="toTop()" data-icon="arrow-u">回到顶端</a></li></ul></div>
+			</div>
+		</div>
+		
+		<!--完善信息提示框-->
+		<div id="tips_dialog" data-role = "dialog">
+			<div data-role="header"data-theme="a">
+				<h1>提示</h1><br>					
+			</div>
+			<div data-role="content">
+				<div id="tips">
+					
+				</div>
+				<center>
+					<a data-role="button" data-rel="back">返回</a>
+				</center>
+			</div>
+		</div>
+		
+		<!--提交金币文本提示-->
+			<div id="tipsCoin" data-role = "dialog">
+			<div data-role="header"data-theme="a">
+				<h1>温馨提示(◐_◑)</h1><br>					
+			</div>
+			<div data-role="content">
+				<div id="tipString">					
+				</div>			
+				<center>
+					<a data-role="button" id="sure" data-rel="back" value="sure">确定</a>
+					<a data-role="button" id="back" data-rel="back" value="sure">返回</a>
+				</center>
+			</div>
+		</div>
+		
+	</body>
+</html>

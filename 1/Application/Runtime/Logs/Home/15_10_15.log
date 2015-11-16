@@ -1,0 +1,68 @@
+[ 2015-10-15T00:01:21+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined variable: sid G:\wamp\www\wyu34coin\1\Application\Runtime\Cache\Home\da0dddd825128b08a095ea0160090ffd.php 第 223 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2015-10-15T00:01:22+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/14"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0042s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwnECBce3gXP98Av7DeuyOWQ' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/14"  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwtvdXOTEk8_QnxxC23rQxvY' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-10-15T00:02:26+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001629s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `coin_user` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001315s ]
+
+[ 2015-10-15T00:02:26+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001556s ]
+

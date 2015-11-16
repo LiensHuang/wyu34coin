@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			$("#dialog").dialog({
+  autoOpen: false,
+  modal: true,
+  buttons : {
+    "Confirm" : function() {
+      alert("You have confirmed!");
+    },
+    "Cancel" : function() {
+     $(this).dialog("close");
+    }
+   }
+  });
+$("#callConfirm").on("click", function(e) {
+  e.preventDefault();
+  $("#dialog").dialog("open");
+});
+		</script>
+	</head>
+	<body>
+		<button id="callConfirm">Confirm!</button>
+<div id="dialog" title="Confirmation Required">
+ Are you sure about this?
+</div>​
+	</body>
+</html>

@@ -1,0 +1,471 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />		
+		<title>每天记录</title>
+		
+		<!--Bootstrap-->
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+      <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!--引入highcharts-->
+		<script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+        <script src="http://cdn.hcharts.cn/highcharts/highcharts.js" type="text/javascript"></script> 	
+	    <script src="http://code.highcharts.com/highcharts-3d.js" type="text/javascript"></script> 
+	    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+	    <script type="text/javascript" src="/wyu34coin/1/Public/Js/collapse.js" ></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--Bootstrap日期-->	
+	<link href="/wyu34coin/1/Public/Css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	<script src="/wyu34coin/1/Public/Js/bootstrap-datetimepicker.js" charset="UTF-8"></script>	
+	<script type="text/javascript" src="/wyu34coin/1/Public/Js/bootstrap-datetimepicker.zh-TW.js" charset="UTF-8"></script>
+	<style>
+		.l{
+			background-color: #428BCA;
+		}
+		.m{
+			background-color: #5CB85C;
+		}
+		.n{
+			background-color: #FFE600;
+		}
+		.o{
+			background-color: #F0AD4E;
+		}
+		.p{
+			background-color: #D9534F;
+		}
+		
+	</style>
+	
+<script>
+		//取出用户记录的方法
+	  function getRecordInfo($date){
+	  	   $.post(
+	   	     	 	"/wyu34coin/1/index.php/Home/User/getRecordByDate",
+	   	     	 	{
+	   	     	 	  coinDate:$date,
+	   	     	 	  opid:'<?php echo ($opid); ?>'
+	   	     	 	},	   	     	 	 
+	   	     	     function(data,status){
+	   	     	     if (data) {
+	   	     	     	var guiltfreeplay=Number(data.guiltfreeplay);
+	   	     	     	var rest=Number(data.rest);	   	     	     	
+	   	     	     	var mandatorywork=Number(data.mandatorywork);
+	   	     	     	var qualitywork=Number(data.qualitywork);
+	   	     	     	var procrastination=Number(data.procrastination);
+	   	     	     	var $coinNum=guiltfreeplay+rest+mandatorywork+qualitywork+procrastination;
+	   	     	     } else{
+	   	     	     	var guiltfreeplay=0;
+	   	     	     	var rest=0;	   	     	     	
+	   	     	     	var mandatorywork=0;
+	   	     	     	var qualitywork=0;
+	   	     	     	var procrastination=0;
+	   	     	     	var $coinNum=0;	   	     	     	
+	   	     	     }
+					   	     //柱形图
+						    $('#container').highcharts({   //图表展示容器，与div的id保持一致
+						        credits:{
+						        	enabled:false
+						        },
+						        chart: {
+						            type: 'column'  ,//指定图表的类型，默认是折线图（line）
+						            
+						        },
+						        title: {
+						            text: ''+$date+' 我的金币记录'      //指定图表标题
+						        },
+						        subtitle: {
+								    text: '当天一共记录了'+$coinNum+'枚金币'
+								},
+						        xAxis: {
+						            categories: ['开心的玩', '休息', '工作/学习','被迫忙活','拖延浪费']   //指定x轴分组
+						        },
+						        yAxis: {
+						            title: {
+						                text: '金币数（30min/枚）'                  //指定y轴的标题
+						            }
+						        },
+						        tooltip: {
+						            valueDecimals: 0,		            
+						            valueSuffix: '枚'
+				               },
+						        series: [{                                 //指定数据列
+						            name: '我花的金币',  	                         //数据列名
+				   		            data: [{y:guiltfreeplay,
+						            	    color:"#7CB5EC"
+						                   },
+						                   {y:rest,
+						            	    color:"#90ED7D"
+						                   },
+						                   {y:qualitywork,
+						            	    color:"#E4D354"
+						                   },
+						                   {y:mandatorywork,
+						            	    color:"#F7A35C"
+						                   },
+						                   {y:procrastination,
+						            	    color:"#F45B5B"
+						                   }]                        //数据
+						        }]
+						    });		    
+						//饼状图    
+					$('#pie').highcharts({
+				        credits:{
+						        	enabled:false
+						        },
+				        chart: {
+				            type: 'pie',
+				            options3d: {
+				                enabled: true,
+				                alpha: 45,
+				                beta: 0
+				            }
+				        },
+				        title: {
+				            text: '时间比例'
+				        },
+				        tooltip: {
+				            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				        },
+				        plotOptions: {
+				            pie: {
+				                allowPointSelect: true,
+				                cursor: 'pointer',
+				                depth: 35,
+				                dataLabels: {
+				                    enabled: true,
+				                    format: '{point.name}'
+				                }
+				            }
+				        },
+				        series: [{
+				            type: 'pie',
+				            name: '时间比例',
+				            data: [
+				                {name:'开心的玩',y:guiltfreeplay*0.5,color:"#7CB5EC"},
+				                {name:'安静休息',y:rest*0.5,color:"#90ED7D"},                    
+				                {
+				                    name: '工作/学习',
+				                    y:qualitywork*0.5,
+				                    sliced: true,
+				                    selected: true,
+				                    color:"#E4D354"
+				                },
+				                 {name:'被迫工作',y:mandatorywork*0.5,color:"#F7A35C"},
+				                 {name:'拖延浪费',y:procrastination*0.5,color:"#F45B5B"}                              
+				            ]
+				        }]
+				    });   	     	     	
+	   	    
+	   	    $("div#Summary P").text(data.coindaydes);
+	   	});	
+	 }
+	  //从information表中取出金币信息记录
+   function getCoinInfoByDate($date){
+	  $.post("/wyu34coin/1/index.php/Home/User/getCoinInformationByJson",
+	       { 
+	       	 opid:'<?php echo ($opid); ?>',
+	         coinDate:$date,
+	         mark:"dayRecord" //告诉getCoinInformationByJson方法，是哪个页面要数据
+	        },
+	     function(data){
+	     	 $("tbody#tbody").empty();
+	       for (var x in data) {	           
+  	            $("tbody#tbody").append("<tr class='"+data[x].cointype+"'><td>"+data[x].coinnum+"</td><td>"+ data[x].timeslot+"</td><td>"+data[x].coindes+"</td><td>"+data[x].coinlocation+"</td></tr>");  	             
+  	        }
+	     
+	    });
+    }
+	//显示时钟
+	$(function () {
+    /**
+     * Get the current time
+     */
+    function getNow() {
+        var now = new Date();
+
+        return {
+            hours: now.getHours() + now.getMinutes() / 60,
+            minutes: now.getMinutes() * 12 / 60 + now.getSeconds() * 12 / 3600,
+            seconds: now.getSeconds() * 12 / 60
+        };
+    }
+
+    /**
+     * Pad numbers
+     */
+    function pad(number, length) {
+        // Create an array of the remaining length + 1 and join it with 0's
+        return new Array((length || 2) + 1 - String(number).length).join(0) + number;
+    }
+
+    var now = getNow();
+
+    // Create the chart
+    $('#clock').highcharts({
+
+        chart: {
+            type: 'gauge',
+            plotBackgroundColor: null,
+            plotBackgroundImage: null,
+            plotBorderWidth: 0,
+            plotShadow: false,
+            height: 200
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        title: {
+            text: 'Beijing time'
+        },
+
+        pane: {
+            background: [{
+                // default background
+            }, {
+                // reflex for supported browsers
+                backgroundColor: Highcharts.svg ? {
+                    radialGradient: {
+                        cx: 0.5,
+                        cy: -0.4,
+                        r: 1.9
+                    },
+                    stops: [
+                        [0.5, 'rgba(255, 255, 255, 0.2)'],
+                        [0.5, 'rgba(200, 200, 200, 0.2)']
+                    ]
+                } : null
+            }]
+        },
+
+        yAxis: {
+            labels: {
+                distance: -20
+            },
+            min: 0,
+            max: 12,
+            lineWidth: 0,
+            showFirstLabel: false,
+
+            minorTickInterval: 'auto',
+            minorTickWidth: 1,
+            minorTickLength: 5,
+            minorTickPosition: 'inside',
+            minorGridLineWidth: 0,
+            minorTickColor: '#666',
+
+            tickInterval: 1,
+            tickWidth: 2,
+            tickPosition: 'inside',
+            tickLength: 10,
+            tickColor: '#666',
+            title: {
+                text: 'Time is my<br/>life',
+                style: {
+                    color: '#BBB',
+                    fontWeight: 'normal',
+                    fontSize: '8px',
+                    lineHeight: '10px'
+                },
+                y: 10
+            }
+        },
+
+        tooltip: {
+            formatter: function () {
+                return this.series.chart.tooltipText;
+            }
+        },
+
+        series: [{
+            data: [{
+                id: 'hour',
+                y: now.hours,
+                dial: {
+                    radius: '60%',
+                    baseWidth: 4,
+                    baseLength: '95%',
+                    rearLength: 0
+                }
+            }, {
+                id: 'minute',
+                y: now.minutes,
+                dial: {
+                    baseLength: '95%',
+                    rearLength: 0
+                }
+            }, {
+                id: 'second',
+                y: now.seconds,
+                dial: {
+                    radius: '100%',
+                    baseWidth: 1,
+                    rearLength: '20%'
+                }
+            }],
+            animation: false,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    },
+
+        // Move
+        function (chart) {
+            setInterval(function () {
+
+                now = getNow();
+
+                var hour = chart.get('hour'),
+                    minute = chart.get('minute'),
+                    second = chart.get('second'),
+                    // run animation unless we're wrapping around from 59 to 0
+                    animation = now.seconds === 0 ?
+                            false :
+                            {
+                                easing: 'easeOutElastic'
+                            };
+
+                // Cache the tooltip text
+                chart.tooltipText =
+                    pad(Math.floor(now.hours), 2) + ':' +
+                    pad(Math.floor(now.minutes * 5), 2) + ':' +
+                    pad(now.seconds * 5, 2);
+
+                hour.update(now.hours, true, animation);
+                minute.update(now.minutes, true, animation);
+                second.update(now.seconds, true, animation);
+
+            }, 1000);
+
+        });
+});
+
+// Extend jQuery with some easing (copied from jQuery UI)
+$.extend($.easing, {
+    easeOutElastic: function (x, t, b, c, d) {
+        var s=1.70158;var p=0;var a=c;
+        if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+        if (a < Math.abs(c)) { a=c; var s=p/4; }
+        else var s = p/(2*Math.PI) * Math.asin (c/a);
+        return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+    }
+});
+///////////////////////////////////////////////////////////////////////////////////////
+		$(function () {
+				
+             getRecordInfo('<?php echo ($date); ?>'); 
+             getCoinInfoByDate('<?php echo ($date); ?>');
+    //显示日期
+     //显示日期选择
+		       $('.form_date').datetimepicker({
+		        language:  'zh-TW',
+		        weekStart: 0,
+		        todayBtn:  true ,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0,
+				
+		    });	
+		    //当选择器隐藏时被触发
+		    $('.form_date').datetimepicker().on('hide', function(){
+		    	
+		    	var $date=$("input[class=form-control]").val();
+		    	var $today=new Date();
+		    	var $selectDate=new Date($date);
+		    	
+		    	if($date&&$selectDate<=$today){
+		    	  getCoinInfoByDate($date);
+		          getRecordInfo($date);		         
+		    	}           
+            });	    
+ 
+});
+
+
+	</script>
+	
+	</head>
+	<body>
+	
+	<div id="top">
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #0088BB;">
+	  <div class="container-fluid">
+	    <div class="navbar-header">   
+	      	<button class="btn btn-info navbar-btn" style="margin-left: 3%;">
+	      		<a href="/wyu34coin/1/index.php/Home/User/homePage?opid=<?php echo ($opid); ?>">
+	        <span class="glyphicon glyphicon-home"> 主页</span>
+	           </a>
+	       </button>
+	    </div>
+	  </div>
+	</nav>
+	</div>	
+	<div id="content">
+		<div class="container" style="margin-top: 20%;">
+		<!--日历-->
+		<form action="" class="form-horizontal"  role="form">		
+		    <div class="form-group">
+                <label for="dtp_input2" class="col-xs-2 control-label ">日期</label>
+                <div class="input-group date form_date col-xs-9" data-date="" data-date-format="yyyy/m/d" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+	    </form> 
+	    </div>
+	    
+	    <div id="clock" style="width: 100%; height: 100%; margin: 0 auto"></div>
+		<div id="container" style="min-width:80px;height:100%;"></div>
+		<hr style="border:1px dashed #000;"/>
+		<div id="pie" style="min-width:80px;height:100%;"></div>
+		
+		<hr style="border:1px solid #2C3E50"/>
+		
+		<!--显示文字记录-->
+		<div class="container">
+			<table class="table">
+		    <h4 class="col-xs-5 col-xs-offset-4">金币文档</h4>
+		   <thead>
+		      <tr style="background-color: #8D5656;">
+		         <th style="width: 15%;">序号</th>
+		         <th>时段</th>
+		         <th>记录</th>
+		         <th style="width: 15%;">地点</th>
+		      </tr>
+		   </thead>
+			   <tbody id="tbody">
+			  
+			   </tbody>
+         </table>
+         <!--小结-->
+          <div id="Summary">
+			<span>当日小结：</span>
+			<p class="bg-danger"></p>
+		  </div>
+		</div>
+		
+	
+	</div>
+	<hr style="border:1px solid #2C3E50"/>
+	<div id="footer">
+		<center>
+			<address>
+			  <strong>关注34枚金币公众号：</strong><br>
+			  wyu34coin<br>
+			  <!--<abbr title="Phone">P:</abbr> 18814182473/662473-->
+			</address>
+		</center>
+	</div>
+ </body>
+</html>

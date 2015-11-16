@@ -1,0 +1,1123 @@
+[ 2015-11-04T20:17:28+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013518s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0358s ]
+SQL: SELECT * FROM `coin_user` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000389s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.461183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.461585s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001851s ]
+
+[ 2015-11-04T20:17:30+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005590s ]
+
+[ 2015-11-04T20:17:33+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001692s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `coin_user` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001379s ]
+
+[ 2015-11-04T20:17:38+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002198s ]
+
+[ 2015-11-04T20:18:08+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0038s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2015-11-04T20:18:08+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000107s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0104s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0159s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0034s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0046s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0006s ]
+
+[ 2015-11-04T20:18:10+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002425s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0041s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001199s ]
+
+[ 2015-11-04T20:18:12+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001689s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0109s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0123s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0006s ]
+
+[ 2015-11-04T20:18:18+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001325s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0047s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2015-11-04T20:18:19+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0064s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0060s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0006s ]
+
+[ 2015-11-04T20:18:24+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001781s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0035s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2015-11-04T20:18:24+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0033s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0060s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0009s ]
+
+[ 2015-11-04T20:18:28+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001977s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0037s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2015-11-04T20:18:29+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0057s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0050s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0009s ]
+
+[ 2015-11-04T20:18:38+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0038s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000888s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001026s ]
+
+[ 2015-11-04T20:18:39+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0057s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0041s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0010s ]
+
+[ 2015-11-04T20:18:44+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/1"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0036s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwradHLKzx7ViGpPLS2WYPV4' ) LIMIT 1   [ RunTime:0.0468s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0035s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0038s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/1"  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwtvdXOTEk8_QnxxC23rQxvY' ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0036s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/1 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0162s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/1 )  [ RunTime:0.0007s ]
+
+[ 2015-11-04T20:18:47+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001624s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0043s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001895s ]
+
+[ 2015-11-04T20:18:48+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001882s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0050s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0067s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0008s ]
+
+[ 2015-11-04T20:19:14+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001296s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0044s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000958s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001221s ]
+
+[ 2015-11-04T20:19:15+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0034s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0056s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0011s ]
+
+[ 2015-11-04T20:19:55+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001491s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/15"  ) LIMIT 10   [ RunTime:0.0165s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0041s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwio-wcBJWs-6s-NZWOBIScA' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0034s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0034s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/10/15"  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0035s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/10/15 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0036s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/10/15 )  [ RunTime:0.0007s ]
+
+[ 2015-11-04T20:27:10+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001363s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0044s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000363s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000973s ]
+
+[ 2015-11-04T20:27:11+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0066s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0065s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0011s ]
+
+[ 2015-11-04T20:28:02+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0037s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001222s ]
+
+[ 2015-11-04T20:28:02+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001732s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0042s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0211s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0008s ]
+
+[ 2015-11-04T20:28:05+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0042s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000438s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2015-11-04T20:28:06+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0044s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0057s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0010s ]
+
+[ 2015-11-04T20:28:25+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0089s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000383s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000804s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001997s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002489s ]
+
+[ 2015-11-04T20:28:25+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001432s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0057s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0057s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0008s ]
+
+[ 2015-11-04T20:28:49+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001853s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0036s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000408s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000946s ]
+
+[ 2015-11-04T20:28:50+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001459s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0064s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0037s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0007s ]
+
+[ 2015-11-04T20:29:56+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0040s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2015-11-04T20:29:57+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001781s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0047s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0036s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0008s ]
+
+[ 2015-11-04T20:29:59+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0044s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.1727s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000384s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000723s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002388s ]
+
+[ 2015-11-04T20:30:00+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001413s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0048s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0062s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0011s ]
+
+[ 2015-11-04T20:30:29+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001578s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0038s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011196s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001199s ]
+
+[ 2015-11-04T20:30:29+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001048s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0035s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0035s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0006s ]
+
+[ 2015-11-04T20:30:41+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0038s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001608s ]
+
+[ 2015-11-04T20:30:42+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001741s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0076s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0047s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0010s ]
+
+[ 2015-11-04T20:31:01+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/1"  ) LIMIT 10   [ RunTime:0.0504s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0214s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwradHLKzx7ViGpPLS2WYPV4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0108s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0064s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/1"  ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( 1=1 AND opid='oXOWrwtvdXOTEk8_QnxxC23rQxvY' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+NOTIC: [8] Undefined variable: relationData G:\wamp\www\wyu34coin\1\ThinkPHP\Library\Think\Model\RelationModel.class.php 第 227 行.
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0041s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/1 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0040s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/1 )  [ RunTime:0.0008s ]
+
+[ 2015-11-04T20:31:35+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `coin_user` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001056s ]
+
+[ 2015-11-04T20:31:35+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001562s ]
+
+[ 2015-11-04T20:31:52+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/goldSquare?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0042s ]
+SQL: SELECT `nickname` FROM `coin_user` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010641s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2015-11-04T20:31:52+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getAllRecordByDate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001793s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid!="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 10   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_record` WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" AND coindate="2015/11/3"  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `coin_likes` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0038s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,User.nickname AS nickname FROM coin_record Record  JOIN coin_likes Likes ON Record.id=Likes.informationid  JOIN coin_user User ON User.opid=Likes.opid WHERE ( 2015/11/3 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_discuss` [ RunTime:0.0040s ]
+SQL: SELECT Record.id AS id,Record.coinDate AS coinDate,Record.week AS week,Record.opid AS opid,Record.guiltFreePlay AS guiltFreePlay,Record.rest AS rest,Record.mandatoryWork AS mandatoryWork,Record.qualityWork AS qualityWork,Record.procrastination AS procrastination,Record.coinDayDes AS coinDayDes,Discuss.discuss AS discuss,User.nickname AS commentators FROM coin_record Record  JOIN coin_discuss Discuss ON Record.id=Discuss.coinDaydesId  JOIN coin_user User ON User.opid=Discuss.commentatorOpid WHERE ( 2015/11/3 )  [ RunTime:0.0008s ]
+
+[ 2015-11-04T20:46:34+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001704s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0415s ]
+SQL: SELECT * FROM `coin_user` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000491s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001631s ]
+
+[ 2015-11-04T20:46:34+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002374s ]
+
+[ 2015-11-04T21:00:02+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001493s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0035s ]
+
+[ 2015-11-04T21:00:57+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001807s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_Count FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.1166s ]
+
+[ 2015-11-04T21:05:42+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_Count FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Illegal string offset 'nickname' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 16 行.
+NOTIC: [2] Illegal string offset 'gender' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 17 行.
+NOTIC: [2] Illegal string offset 'coinnumber' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 25 行.
+NOTIC: [2] Illegal string offset 'coinnumber' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 26 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001140s ]
+
+[ 2015-11-04T21:05:43+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000223s ]
+INFO: [ app_init ] --END-- [ RunTime:0.350946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006770s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003746s ]
+
+[ 2015-11-04T21:07:07+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001617s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_Count FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'nickname' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 16 行.
+NOTIC: [2] Illegal string offset 'gender' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 17 行.
+NOTIC: [2] Illegal string offset 'coinnumber' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 25 行.
+NOTIC: [2] Illegal string offset 'coinnumber' G:\wamp\www\wyu34coin\1\Application\Home\Controller\UserController.class.php 第 26 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000849s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001714s ]
+
+[ 2015-11-04T21:07:08+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002020s ]
+
+[ 2015-11-04T21:07:49+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/homePage?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001979s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `coin_user` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0048s ]
+SQL: SELECT COUNT(*) AS tp_Count FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000974s ]
+
+[ 2015-11-04T21:07:49+08:00 ] ::1 /wyu34coin/1/index.php/Home/Public/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001478s ]
+
+[ 2015-11-04T23:10:06+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/weekCoinShow?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001423s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001517s ]
+
+[ 2015-11-04T23:10:06+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getWeekStartAndEnd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002036s ]
+
+[ 2015-11-04T23:10:06+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getWeekCoinInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001570s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` BETWEEN '2015/11/2' AND '2015/11/8' ORDER BY coinDate asc  [ RunTime:0.0411s ]
+
+[ 2015-11-04T23:10:10+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getWeekStartAndEnd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001213s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001374s ]
+
+[ 2015-11-04T23:10:10+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getWeekCoinInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000888s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001964s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` BETWEEN '2015/10/26' AND '2015/11/1' ORDER BY coinDate asc  [ RunTime:0.0008s ]
+
+[ 2015-11-04T23:10:37+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getWeekStartAndEnd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001439s ]
+
+[ 2015-11-04T23:10:37+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getWeekCoinInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001957s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` BETWEEN '2015/10/26' AND '2015/11/1' ORDER BY coinDate asc  [ RunTime:0.0008s ]
+

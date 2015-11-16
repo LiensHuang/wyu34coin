@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+		<title>一周金币秀</title>
+				<!--Bootstrap-->
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+      <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<!--引入highcharts-->
+		<script src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+        <script src="http://cdn.hcharts.cn/highcharts/highcharts.js" type="text/javascript"></script> 	
+	    <script src="http://code.highcharts.com/highcharts-3d.js" type="text/javascript"></script> 
+	    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+	    <script type="text/javascript" src="__PUBLIC__/Js/collapse.js" ></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--Bootstrap日期-->	
+	<link href="__PUBLIC__/Css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	<script src="__PUBLIC__/Js/bootstrap-datetimepicker.js" charset="UTF-8"></script>	
+	<script type="text/javascript" src="__PUBLIC__/Js/bootstrap-datetimepicker.zh-TW.js" charset="UTF-8"></script>
+	<style>
+		.l{
+			background-color: #428BCA;
+		}
+		.m{
+			background-color: #5CB85C;
+		}
+		.n{
+			background-color: #FFE600;
+		}
+		.o{
+			background-color: #F0AD4E;
+		}
+		.p{
+			background-color: #D9534F;
+		}
+		.boderColor{
+			border:#8D5656 solid 1px;			
+		}
+		
+	</style>
+	
+	<script>
+	//从information表中取出一周的金币信息记录
+   function getWeekCoinInfo($date){
+	  $.post("__APP__/Home/User/getWeekCoinInfo",
+	       { 
+	       	 opid:'<{$opid}>',
+	         coinDate:$date
+	        },
+	     function(data){
+	     	var $tips="<tr class='boderColor'><td colspan='4'><center>这周无该类型时间记录噢(∩_∩)</center></td></tr>";
+	     	    $("tbody#guiltFreePlay").empty();
+	     		$("tbody#rest").empty();
+	     		$("tbody#mandatoryWork").empty();
+	     		$("tbody#qualityWork").empty();
+	     		$("tbody#procrastination").empty();
+	     	if(data!=""){	     			     		
+	     		var $guiltFreePlay=0;
+	     		var $rest=0;
+	     		var $mandatoryWork=0;
+	     		var $qualityWork=0;
+	     	    var $procrastination=0;		
+	     		for(var x in data){
+	     		    switch(data[x].week){
+						case '1':data[x].week='周一';break;
+						case '2':data[x].week='周二';break;
+						case '3':data[x].week='周三';break;
+						case '4':data[x].week='周四';break;
+						case '5':data[x].week='周五';break;
+						case '6':data[x].week='周六';break;
+						case '7':data[x].week='周日';break;
+	     		    }
+	     		    
+	     		     switch(data[x].cointype){
+						case 'l': 							
+							$("tbody#guiltFreePlay").append("<tr class='l'><td>"+data[x].week+"</td><td>"+data[x].timeslot+"</td><td>"+data[x].coindes+"</td><td>"+data[x].coinlocation+"</td></tr>");				
+								$guiltFreePlay=1;
+								break;
+						case 'm':						    
+							$("tbody#rest").append("<tr class='m'><td>"+data[x].week+"</td><td>"+data[x].timeslot+"</td><td>"+data[x].coindes+"</td><td>"+data[x].coinlocation+"</td></tr>");				
+								$rest=1;
+								break;
+						case 'n':						   
+							$("tbody#mandatoryWork").append("<tr class='n'><td>"+data[x].week+"</td><td>"+data[x].timeslot+"</td><td>"+data[x].coindes+"</td><td>"+data[x].coinlocation+"</td></tr>");				
+								$mandatoryWork=1;
+								break;
+						case 'o':						    
+							$("tbody#qualityWork").append("<tr class='o'><td>"+data[x].week+"</td><td>"+data[x].timeslot+"</td><td>"+data[x].coindes+"</td><td>"+data[x].coinlocation+"</td></tr>");				
+								$qualityWork=1;
+								break;
+						case 'p':						    
+							$("tbody#procrastination").append("<tr class='p'><td>"+data[x].week+"</td><td>"+data[x].timeslot+"</td><td>"+data[x].coindes+"</td><td>"+data[x].coinlocation+"</td></tr>");				
+								$procrastination=1;
+								break;
+						default:							
+							break;
+						  }	     		    
+	     		  }	
+	     		  //如果某个参数等于零，则说明这周没有该类型的数据
+	     		 if ($guiltFreePlay==0) {
+	     		 	$("tbody#guiltFreePlay").append($tips);				
+	     		 } 
+	     		 if($rest==0){
+	     		 	$("tbody#rest").append($tips);				
+	     		 }
+	     		 if($mandatoryWork==0){
+	     		 	$("tbody#mandatoryWork").append($tips);				
+	     		 }
+	     		 if($qualityWork==0){
+	     		 	$("tbody#qualityWork").append($tips);				
+	     		 }
+	     		 if($procrastination==0){
+	     		 	$("tbody#procrastination").append($tips);				
+	     		 }
+	     		
+	     	}else{
+	     		$("tbody#guiltFreePlay").append($tips);				
+	     		$("tbody#rest").append($tips);				
+	     		$("tbody#mandatoryWork").append($tips);				
+	     		$("tbody#qualityWork").append($tips);				
+	     		$("tbody#procrastination").append($tips);				
+	     	}
+     	     
+	    });
+    }
+		//取出一周的开始日期和结束日期
+		function getWeekStart($date){
+			//alert($date);
+			$.post(
+				 "__APP__/Home/User/getWeekStartAndEnd",
+			     {coinDate:$date},	   	     	 	  
+	   	     	 function(data,status){
+	   	     	   var WeekObj = JSON.parse(data); 
+	   	     	 		//alert(WeekObj.weekStart);
+	   	     	 		$("span#weekTimeSlot h4").text("金币周:"+WeekObj.weekStart+"~"+WeekObj.weekEnd);
+	   	     	 	});
+		  }
+		
+	//获取某一周的金币记录（record表）
+		function getWeekCoinRecord($date){
+				$.post(
+	   	     	 	"__APP__/Home/User/getWeekCoinRecord",
+	   	     	 	{
+	   	     	 	  coinDate:$date,
+	   	     	 	  opid:'<{$opid}>'
+	   	     	 	},	   	     	 	 
+	   	     	     function(data,status){
+	   	     	     	//初始化这周的数据
+	   	     	        //周一
+	   	     	     		var guiltfreeplay1=0;
+   	     	     			var rest1=0;
+   	     	     			var mandatorywork1=0;
+							var qualitywork1=0;
+							var procrastination1=0;	
+							//周二
+							var guiltfreeplay2=0;
+   	     	     			var rest2=0;
+   	     	     			var mandatorywork2=0;
+							var qualitywork2=0;
+							var procrastination2=0;	
+							//周三
+							var guiltfreeplay3=0;
+   	     	     			var rest3=0;
+   	     	     			var mandatorywork3=0;
+							var qualitywork3=0;
+							var procrastination3=0;	
+							//周四
+							var guiltfreeplay4=0;
+   	     	     			var rest4=0;
+   	     	     			var mandatorywork4=0;
+							var qualitywork4=0;
+							var procrastination4=0;	
+							//周五
+							var guiltfreeplay5=0;
+   	     	     			var rest5=0;
+   	     	     			var mandatorywork5=0;
+							var qualitywork5=0;
+							var procrastination5=0;	
+							//周六
+							var guiltfreeplay6=0;
+   	     	     			var rest6=0;
+   	     	     			var mandatorywork6=0;
+							var qualitywork6=0;
+							var procrastination6=0;	
+							//周日
+							var guiltfreeplay7=0;
+   	     	     			var rest7=0;
+   	     	     			var mandatorywork7=0;
+							var qualitywork7=0;
+							var procrastination7=0;	
+	   	     	     	for(var x in data){
+	   	     	     		switch(data[x].week){
+	   	     	     			case '1':  //星期一的数据
+		   	     	     			 guiltfreeplay1=Number(data[x].guiltfreeplay);
+		   	     	     			 rest1=Number(data[x].rest);
+		   	     	     			 mandatorywork1=Number(data[x].mandatorywork);
+									 qualitywork1=Number(data[x].qualitywork);
+									 procrastination1=Number(data[x].procrastination);
+									break;
+	   	     	     			case '2':
+		   	     	     			 guiltfreeplay2=Number(data[x].guiltfreeplay);
+		   	     	     			 rest2=Number(data[x].rest);
+		   	     	     			 mandatorywork2=Number(data[x].mandatorywork);
+									 qualitywork2=Number(data[x].qualitywork);
+									 procrastination2=Number(data[x].procrastination);
+		   	     	     			break;
+	   	     	     			case '3':
+		   	     	     			 guiltfreeplay3=Number(data[x].guiltfreeplay);
+		   	     	     			 rest3=Number(data[x].rest);
+		   	     	     			 mandatorywork3=Number(data[x].mandatorywork);
+									 qualitywork3=Number(data[x].qualitywork);
+									 procrastination3=Number(data[x].procrastination);
+		   	     	     			break;
+	   	     	     			case '4':
+		   	     	     			 guiltfreeplay4=Number(data[x].guiltfreeplay);
+		   	     	     			 rest4=Number(data[x].rest);
+		   	     	     			 mandatorywork4=Number(data[x].mandatorywork);
+									 qualitywork4=Number(data[x].qualitywork);
+									 procrastination4=Number(data[x].procrastination);
+		   	     	     			break;
+	   	     	     			case '5':
+		   	     	     			 guiltfreeplay5=Number(data[x].guiltfreeplay);
+		   	     	     			 rest5=Number(data[x].rest);
+		   	     	     			 mandatorywork5=Number(data[x].mandatorywork);
+									 qualitywork5=Number(data[x].qualitywork);
+									 procrastination5=Number(data[x].procrastination);
+		   	     	     			break;
+	   	     	     			case '6':
+		   	     	     			 guiltfreeplay6=Number(data[x].guiltfreeplay);
+		   	     	     			 rest6=Number(data[x].rest);
+		   	     	     			 mandatorywork6=Number(data[x].mandatorywork);
+									 qualitywork6=Number(data[x].qualitywork);
+									 procrastination6=Number(data[x].procrastination);
+		   	     	     			break;
+	   	     	     			case '7':
+		   	     	     			 guiltfreeplay7=Number(data[x].guiltfreeplay);
+		   	     	     			 rest7=Number(data[x].rest);
+		   	     	     			 mandatorywork7=Number(data[x].mandatorywork);
+									 qualitywork7=Number(data[x].qualitywork);
+									 procrastination7=Number(data[x].procrastination);
+		   	     	     			break;
+	   	     	     			default:
+	   	     	     			break;
+	   	     	     		}
+	   	     	     	}
+	   	     	     	
+	   	     var $guiltfreeplay=(guiltfreeplay1+guiltfreeplay2+guiltfreeplay3+guiltfreeplay4+guiltfreeplay5+guiltfreeplay6+guiltfreeplay7)*0.5;    	
+	         var $rest=(rest1+rest2+rest3+rest4+rest5+rest6+rest7)*0.5;
+	         var $mandatorywork=(mandatorywork1+mandatorywork2+mandatorywork3+mandatorywork4+mandatorywork5+mandatorywork6+mandatorywork7)*0.5;
+	         var $qualitywork=(qualitywork1+qualitywork2+qualitywork3+qualitywork4+qualitywork5+qualitywork6+qualitywork7)*0.5;
+	         var $procrastination=(procrastination1+procrastination2+procrastination3+procrastination4+procrastination5+procrastination6+procrastination7)*0.5;
+	         var $totalHours=$guiltfreeplay+$rest+$mandatorywork+$qualitywork+$procrastination; 
+	
+	$('#lineChart').highcharts({      
+        credits:{
+				 enabled:false
+				},
+        title: {
+            text: '(本周共记录了'+$totalHours/0.5+'枚金币，一周238枚)',
+            x: -5, //center
+            y: 10
+        },
+        subtitle: {
+            text: '点击下方时间类型可以隐藏其中一条时间曲线',
+            x: -5
+        },
+        xAxis: {
+            categories: ['周一','周二','周三','周四','周五','周六','周日'],
+            tickmarkPlacement:'on'
+        },
+        yAxis: {
+            title: {
+                text: '时间/时'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '小时'
+        },
+        legend: {
+            layout: 'horizontal',
+            floating: true,
+            align: 'left',
+            verticalAlign: 'top',
+            borderWidth: 0,
+            x: 40,
+            y: 30
+        },
+        series: [{
+            name: '开心的玩',
+            data: [guiltfreeplay1*0.5,guiltfreeplay2*0.5, guiltfreeplay3*0.5, guiltfreeplay4*0.5, guiltfreeplay5*0.5,guiltfreeplay6*0.5, guiltfreeplay7*0.5],
+            color: '#7CB5EC'
+        }, {
+            name: '休息',
+            data: [rest1*0.5, rest2*0.5, rest3*0.5, rest4*0.5, rest5*0.5, rest6*0.5, rest7*0.5],
+            color: '#90ED7D'
+        }, {
+            name: '工作学习',
+            data: [qualitywork1*0.5, qualitywork2*0.5,qualitywork3*0.5, qualitywork4*0.5, qualitywork5*0.5, qualitywork6*0.5, qualitywork7*0.5],         
+            color: '#E4D354'
+        }, {
+            name: '被迫忙活',
+            data: [mandatorywork1*0.5, mandatorywork2*0.5, mandatorywork3*0.5, mandatorywork4*0.5, mandatorywork5*0.5, mandatorywork6*0.5, mandatorywork7*0.5],
+            color: '#F7A35C'
+        }, {
+            name: '拖延浪费',
+            data: [procrastination1*0.5, procrastination2*0.5, procrastination3*0.5, procrastination4*0.5, procrastination5*0.5, procrastination6*0.5, procrastination7*0.5],
+            color: '#F45B5B'
+        }]
+    });
+    
+     //3D柱形图
+    $('#3DcolumnChart').highcharts({
+          credits:{
+					enabled:false
+				 },
+        chart: {
+            type: 'column',
+            margin: 75,
+            options3d: {
+                enabled: true,
+                alpha: 10,
+                beta: 25,
+                depth: 70
+            }
+        },
+        title: {
+            text: '本周时间分布'
+        },
+        subtitle: {
+            text: '一周有168个小时<br/>(其中119小时是金币时间，目前记录了'+$totalHours+'小时)<br/>你的时间去哪里？'
+        },
+        plotOptions: {
+            column: {
+                depth: 25
+            }
+        },
+        xAxis: {
+            categories: ['开心的玩', '休息', '工作/学习','被迫忙活','拖延浪费']   //指定x轴分组
+        },
+        yAxis: {
+            title: {
+                text: null
+            }
+        },
+        legend: {
+            layout: 'horizontal',
+            floating: true,
+            align: 'left',
+            verticalAlign: 'top',
+            borderWidth: 0,
+            x: 20,
+            y: 0
+        },
+        series: [{
+            name: '时长',
+           data: [{y:$guiltfreeplay,
+                    color:"#7CB5EC"
+                   },
+                   {y:$rest,
+                    color:"#90ED7D"
+                   },
+                   {y:$qualitywork,
+                    color:"#E4D354"
+                   },
+                   {y:$mandatorywork,
+                    color:"#F7A35C"
+                   },
+                   {y:$procrastination,
+                    color:"#F45B5B"
+                   }]        
+            }]
+         });
+    
+    //3D双饼图
+     $('#3Dpie').highcharts({
+        credits:{
+					enabled:false
+				},
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: '本周时间比例'
+        },
+        subtitle: {
+            text: '您本周一共记录了'+$totalHours+'个小时'
+        },
+        tooltip: {
+				    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				    },
+				        plotOptions: {
+				            pie: {
+				                allowPointSelect: true,
+				                cursor: 'pointer',
+				                depth: 35,
+				                dataLabels: {
+				                    enabled: true,
+				                    format: '{point.name}'
+				                }
+				            }
+				        },
+        series: [{
+            name: '金币时间比例',
+            data: [
+                {name:'开心的玩',y:$guiltfreeplay,color:"#7CB5EC"},
+                {name:'安静休息',y:$rest,color:"#90ED7D"},                    
+                {
+                    name: '工作/学习',
+                    y:$qualitywork,
+                    sliced: true,
+                    selected: true,
+                    color:"#E4D354"
+                },
+                 {name:'被迫工作',y:$mandatorywork,color:"#F7A35C"},
+                 {name:'拖延浪费',y:$procrastination,color:"#F45B5B"}                              
+                  ]
+                }]
+            });
+     	 });
+	}
+		
+$(function () {
+
+		getWeekCoinRecord('<{$date}>');  //取出信息，显示3个图表
+		getWeekStart('<{$date}>');     //取出一周的开始日期和结束日期，并显示
+        getWeekCoinInfo('<{$date}>');
+    //显示日期
+     //显示日期选择
+		       $('.form_date').datetimepicker({
+		        language:  'zh-TW',
+		        weekStart: 1,		      
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0,
+				
+		    });	
+		    //当选择器隐藏时被触发
+		    $('.form_date').datetimepicker().on('hide', function(){
+		    	var $date=$("input[class=form-control]").val();
+		    	var $today=new Date();
+		    	var $selectDate=new Date($date);
+		    	if($date&&$selectDate<=$today){
+		    	 getWeekCoinRecord($date); //获取这周的金币记录，用于报表
+		         getWeekStart($date);          
+		         getWeekCoinInfo($date);   //获取这周的金币文档信息，显示于表格
+		    	}           
+            });	    
+});
+
+
+	</script>
+
+	</head>
+	<body>
+		<div id="top">
+			<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #0088BB;">
+			  <div class="container-fluid">
+			    <div class="navbar-header">   
+			      	<button class="btn btn-info navbar-btn" style="margin-left: 3%;">
+			      		<a href="__APP__/Home/User/homePage?opid=<{$opid}>">
+			        <span class="glyphicon glyphicon-home"> 主页</span>
+			            </a>
+			       </button>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+	<div id="content" style="height: 100%;">
+			<div class="container" style="margin-top: 20%;">
+				<!--日历-->
+				<form action="" class="form-horizontal"  role="form">		
+				    <div class="form-group">
+			                <label for="dtp_input2" class="col-xs-2 control-label ">日期</label>
+			                <div class="input-group date form_date col-xs-9" data-date="" data-date-format="yyyy/m/d" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+			                    <input class="form-control" size="16" type="text" value="" readonly>
+			                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+			                </div>
+							<input type="hidden" id="dtp_input2" value="" /><br/>
+		            </div>
+			    </form> 
+	       </div>
+	       <div id="week" class="container">	      
+	       		<center>
+	       			<span id="weekTimeSlot"><h4> </h4></span>	
+	       		</center>	       			          		       		       
+	       </div>
+	       <!--图表-->
+	       <!--折线图-->
+	       <center>
+	           <h4>时间曲线图</h4> 
+	       <div id="lineChart" style="min-width:20%;height:100%;"></div>
+	        <hr style="border:1px dashed #000;"/>
+	       <div id="3DcolumnChart" style="height:60%;"></div>
+	        <hr style="border:1px dashed #000;"/>
+	        <div id="3Dpie" style="height: height:60%;"></div>
+	        <hr style="border:1px solid #2C3E50;"/>
+	        </center>
+	        <!--文档记录-->
+	       <div class="container">
+	       	 <h4 class="col-xs-5 col-xs-offset-4"><center>金币文档</center></h4>
+				<table class="table">
+					<caption>拖延浪费</caption>
+					   <thead>
+					      <tr style="background-color: #8D5656;">			       
+					         <th style="width: 15%;">周几</th>
+					         <th>时段</th>
+					         <th>记录</th>
+					         <th style="width: 15%;">地点</th>
+					      </tr>
+					   </thead>
+				   <tbody id="procrastination">
+				  
+				   </tbody>
+	         </table>
+	         
+	         <table class="table">
+					<caption>工作学习</caption>
+					   <thead>
+					      <tr style="background-color: #8D5656;">			       
+					         <th style="width: 15%;">周几</th>
+					         <th>时段</th>
+					         <th>记录</th>
+					         <th style="width: 15%;">地点</th>
+					      </tr>
+					   </thead>
+				   <tbody id="mandatoryWork">
+				  
+				   </tbody>
+	         </table>
+	         
+	         <table class="table">
+					<caption>被迫忙活</caption>
+					   <thead>
+					      <tr style="background-color: #8D5656;">			       
+					         <th style="width: 15%;">周几</th>
+					         <th>时段</th>
+					         <th>记录</th>
+					         <th style="width: 15%;">地点</th>
+					      </tr>
+					   </thead>
+				   <tbody id="qualityWork">
+				  
+				   </tbody>
+	         </table>
+	         
+	         <table class="table">
+					<caption>开心的玩</caption>
+					   <thead>
+					      <tr style="background-color: #8D5656;">			       
+					         <th style="width: 15%;">周几</th>
+					         <th>时段</th>
+					         <th>记录</th>
+					         <th style="width: 15%;">地点</th>
+					      </tr>
+					   </thead>
+				   <tbody id="guiltFreePlay">
+				     
+				   </tbody>
+	         </table>
+	         <table class="table">
+					<caption>休息</caption>
+					   <thead>
+					      <tr style="background-color: #8D5656;">			       
+					         <th style="width: 15%;">周几</th>
+					         <th>时段</th>
+					         <th>记录</th>
+					         <th style="width: 15%;">地点</th>
+					      </tr>
+					   </thead>
+				   <tbody id="rest">
+				   	
+				   </tbody>
+	         </table>
+	      
+		</div>
+	</div>
+	<hr style="border:1px solid #2C3E50;"/>	
+		<div id="footer">
+			<center>
+				<address>
+				  <strong>关注34枚金币公众号：</strong><br>
+				  wyu34coin<br>
+				  <!--<abbr title="Phone">P:</abbr> 18814182473/662473-->
+				</address>
+		    </center>
+		</div>
+	</body>
+</html>
