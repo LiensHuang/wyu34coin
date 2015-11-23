@@ -3,6 +3,9 @@ namespace Home\Controller;
 use Think\Controller;
 
 class UserController extends Controller{
+	/*
+	 * 显示主页
+	 * */
 	public function homePage(){
 		$opid=I('opid');	      
 		$User=M('User');
@@ -29,22 +32,59 @@ class UserController extends Controller{
 		$this->display();
 	}
 	
-	//接收并添加金币信息
+	/*
+	 * 接收并添加金币信息
+	 * 
+	 * */
 	public function receiveCoinText(){
 		    			
 		     $information=M("Information");   //实例化information对象（对应金币信息表）
-		     $num=I('num');
-			 $coinType=I('coinType');	
-			 $timeSlot=I('timeSlot');
-			 $timeSlot=substr($timeSlot,0,strpos($timeSlot,' ')); //截掉后面的英文字符	    
+		     $num=I('startNum');              //开始的时间段号数
+			 $endNum=I('endNum');             //结束的时间段号数
+			 $coinType=I('coinType');	      //时间类型
+			 $timeSlot=I('timeSlot');         //时间段
+
+			 $startTimeNum=substr($timeSlot,0,strpos($timeSlot,':')); //截掉:后面的字符串，获取一个数字，如7:00~7:30获得7
+		  	    
 			 $recordTime=I('date',date('Y/n/j',time()),'htmlspecialchars'); //今天的时间 格式：2015/10/1
-			
-			 $information->create();          //创建information数据对象！
-			 $information->date=$recordTime;  //记录时间	
-			 $information->timeSlot=$timeSlot;       
-			 $information->add();      //插入表coin_information
+	            
+	            $data['opid']=I('opid');
+	            $data['date']=I('date',date('Y/n/j',time()),'htmlspecialchars');
+				$data['coinType']=I('coinType');
+				$data['coinDes']=I('coinDes');
+				$data['coinLocation']=I('coinLocation');
+				//创建查询条件
+				$where['opid']=I('opid');
+				$where['date']=$data['date'];
+				//当$num为偶数时
+				if($num%2==0){
+					$start1=$startTimeNum;
+				}else{
+					$start1=$startTimeNum-1;
+				}						
+				$start2=$startTimeNum-1;	
+                $addCoinNum=0;  //增加的金币个数
+			//循环产生对应的时间段，并且插入数据到information表			
+			for ($i=$num; $i <=$endNum ; $i++) {				
+				$data['coinNum']=$i;
+				$where['coinNum']=$i;
+				if($i%2==0){
+					$start2=$start2+1;
+					$data['timeSlot']=($start2).":30~".($start2+1).":00";
+				}else{
+					$start1=$start1+1;
+					$data['timeSlot']=$start1.":00~".($start1).":30";
+				}
+                 //如果对应的时间段已经记录过了，则跳过这次循环
+               if($information->where($where)->find()){
+               	    continue;
+               }	
+			   $information->add($data);      //插入表coin_information	
+			   $addCoinNum=$addCoinNum+1;	    
+			}
+
 			 				 
-			 $record=M('Record');       //实例化record对象
+			$record=M('Record');       //实例化record对象
 		    //创建条件，			 			
 			$map['coinDate'] = $recordTime; 
 			$map['opid'] = I('opid');	
@@ -57,22 +97,23 @@ class UserController extends Controller{
 			 $record->create($data);
 			 $record->add();       //opid,coinDate添加进入coin_record表
 		}	 	 	
-			//对应的金币类型加1
+			 //对应的金币类型增加
 			 $coinType=I('coinType');
+			 
 			 switch ($coinType) {
-			 	case 'l': $record->where($map)->setInc('guiltFreePlay');
+			 	case 'l': $record->where($map)->setInc('guiltFreePlay',$addCoinNum);
 			 		
 			 		break;
-				case 'm':$record->where($map)->setInc('rest');
+				case 'm':$record->where($map)->setInc('rest',$addCoinNum);
 			 		
 			 		break;	
-			 	case 'n':$record->where($map)->setInc('qualityWork');
+			 	case 'n':$record->where($map)->setInc('qualityWork',$addCoinNum);
 			 		
 			 		break;
-				case 'o':$record->where($map)->setInc('mandatoryWork');
+				case 'o':$record->where($map)->setInc('mandatoryWork',$addCoinNum);
 			 		
 			 		break;
-				case 'p':$record->where($map)->setInc('procrastination');
+				case 'p':$record->where($map)->setInc('procrastination',$addCoinNum);
 			 		
 			 		break;
 			 	default:
@@ -81,10 +122,14 @@ class UserController extends Controller{
 			 }	
 			 //记录的金币总数加1	
 			 $User=M('User');
-			 $User->where('opid="'.$map['opid'].'"')->setInc('coinNumber');			 	   
+			 $User->where('opid="'.$map['opid'].'"')->setInc('coinNumber',$addCoinNum);			 	   
 	}
 
-    //获取某一天的information表的信息，返回json数据
+    /*
+	 * 
+	 * 获取某一天的information表的信息，返回json数据
+	 * 
+	 * */
     public function getCoinInformationByJson(){
     	$mark=I('mark'," ",'htmlspecialchars');
 		
@@ -320,7 +365,17 @@ class UserController extends Controller{
 		
 		$this->display();
 	}
-	
+     
+	 
+	 /*
+	  * 显示“我的时间相册”
+	  * 
+	  * */
+	public function picture(){
+		$url=I('picurl');
+		$this->assign('url',$url);
+		$this->display();
+	}
   
 	  //更新信息
 	  public function doRenew(){

@@ -1,0 +1,797 @@
+[ 2015-11-23T00:05:50+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000333s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000958s ]
+
+[ 2015-11-23T00:05:52+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001005s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001594s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:06:08+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 0 AND `timeSlot` = '7:30~8:00' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','0','7:30~8:00') [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 1 AND `timeSlot` = '8:00~8:30' LIMIT 1   [ RunTime:0.0013s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','1','8:00~8:30') [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 2 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','2','8:30~9:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 3 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','3','9:00~9:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 4 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','4','9:30~10:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 5 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','5','10:00~10:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = '按时到岗' AND `coinLocation` = '按时到岗' AND `coinNum` = 6 AND `timeSlot` = '10:30~11:00' LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','按时到岗','按时到岗','6','10:30~11:00') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `coin_record` (`opid`,`coinDate`,`week`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','1') [ RunTime:0.1703s ]
+SQL: UPDATE `coin_record` SET `rest`=rest+7 WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0041s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+7 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002686s ]
+
+[ 2015-11-23T00:11:48+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001272s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014233s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001357s ]
+
+[ 2015-11-23T00:11:50+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001758s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:12:02+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001846s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 0 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','0','8:30~9:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 1 AND `timeSlot` = '8:00~8:30' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','1','8:00~8:30') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 2 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','2','9:30~10:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 3 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','3','9:00~9:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 4 AND `timeSlot` = '10:30~11:00' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','4','10:30~11:00') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 5 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','5','10:00~10:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 6 AND `timeSlot` = '11:30~12:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','6','11:30~12:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag1' AND `coinLocation` = 'sdag1' AND `coinNum` = 7 AND `timeSlot` = '11:00~11:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag1','sdag1','7','11:00~11:30') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `coin_record` SET `rest`=rest+8 WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0069s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+8 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004681s ]
+
+[ 2015-11-23T00:15:45+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2015-11-23T00:15:46+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001563s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:15:58+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001330s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 1 AND `timeSlot` = '7:00~7:30' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','1','7:00~7:30') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 2 AND `timeSlot` = '7:30~8:00' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','2','7:30~8:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 3 AND `timeSlot` = '8:00~8:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','3','8:00~8:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 4 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','4','8:30~9:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 5 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','5','9:00~9:30') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 6 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','6','9:30~10:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'sdag' AND `coinLocation` = 'sdag' AND `coinNum` = 7 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','sdag','sdag','7','10:00~10:30') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `coin_record` SET `rest`=rest+7 WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0037s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+7 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.1046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004906s ]
+
+[ 2015-11-23T00:18:37+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001466s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001205s ]
+
+[ 2015-11-23T00:18:39+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001738s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:18:47+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001079s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 1 AND `timeSlot` = '7:00~7:30' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','1','7:00~7:30') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 2 AND `timeSlot` = '7:30~8:00' LIMIT 1   [ RunTime:0.0011s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','2','7:30~8:00') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 3 AND `timeSlot` = '8:00~8:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','3','8:00~8:30') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 4 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','4','8:30~9:00') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 5 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','5','9:00~9:30') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 6 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','6','9:30~10:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'm' AND `coinDes` = 'dfh1' AND `coinLocation` = 'sdgh1' AND `coinNum` = 7 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','m','dfh1','sdgh1','7','10:00~10:30') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `coin_record` (`opid`,`coinDate`,`week`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','1') [ RunTime:0.0003s ]
+SQL: UPDATE `coin_record` SET `rest`=rest+7 WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0051s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+7 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2015-11-23T00:20:59+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001424s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014338s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001235s ]
+
+[ 2015-11-23T00:21:00+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001584s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:21:16+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001386s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 1 AND `timeSlot` = '7:00~7:30' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','1','7:00~7:30') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 2 AND `timeSlot` = '7:30~8:00' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','2','7:30~8:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 3 AND `timeSlot` = '8:00~8:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','3','8:00~8:30') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 4 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','4','8:30~9:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 5 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','5','9:00~9:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 6 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','6','9:30~10:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 7 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','7','10:00~10:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'n' AND `coinDes` = 'dfh1' AND `coinLocation` = 'dsfhh1' AND `coinNum` = 8 AND `timeSlot` = '10:30~11:00' LIMIT 1   [ RunTime:0.0012s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','n','dfh1','dsfhh1','8','10:30~11:00') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `coin_record` (`opid`,`coinDate`,`week`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','1') [ RunTime:0.0003s ]
+SQL: UPDATE `coin_record` SET `qualityWork`=qualityWork+8 WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0056s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+8 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001734s ]
+
+[ 2015-11-23T00:22:13+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002773s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-23' AND `coinType` = 'p' AND `coinDes` = 'sdahg1' AND `coinLocation` = 'sah1' AND `coinNum` = 9 AND `timeSlot` = '11:00~11:30' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-23','p','sdahg1','sah1','9','11:00~11:30') [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `coin_record` SET `procrastination`=procrastination+1 WHERE `coinDate` = '2015-11-23' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0031s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+1 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004108s ]
+
+[ 2015-11-23T00:23:20+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:23:26+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001083s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:23:27+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:23:30+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000888s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001029s ]
+
+[ 2015-11-23T00:23:33+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001667s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2015-11-23T00:23:38+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001909s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-11-23T00:24:52+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'n' AND `coinDes` = 'sdgddddd' AND `coinLocation` = 'ddddd' AND `coinNum` = 1 AND `timeSlot` = '7:00~7:30' LIMIT 1   [ RunTime:0.0009s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','n','sdgddddd','ddddd','1','7:00~7:30') [ RunTime:0.0005s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'n' AND `coinDes` = 'sdgddddd' AND `coinLocation` = 'ddddd' AND `coinNum` = 2 AND `timeSlot` = '7:30~8:00' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','n','sdgddddd','ddddd','2','7:30~8:00') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'n' AND `coinDes` = 'sdgddddd' AND `coinLocation` = 'ddddd' AND `coinNum` = 3 AND `timeSlot` = '8:00~8:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','n','sdgddddd','ddddd','3','8:00~8:30') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `coin_record` SET `qualityWork`=qualityWork+3 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0036s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+3 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001190s ]
+
+[ 2015-11-23T00:25:29+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002726s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'o' AND `coinDes` = 'sdg1' AND `coinLocation` = 'dsg1' AND `coinNum` = 5 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','o','sdg1','dsg1','5','9:00~9:30') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `coin_record` SET `mandatoryWork`=mandatoryWork+1 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0035s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+1 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.1018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001178s ]
+
+[ 2015-11-23T00:25:36+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002027s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'p' AND `coinDes` = 'sdg1' AND `coinLocation` = 'sdg1' AND `coinNum` = 8 AND `timeSlot` = '10:30~11:00' LIMIT 1   [ RunTime:0.0013s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','p','sdg1','sdg1','8','10:30~11:00') [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `coin_record` SET `procrastination`=procrastination+1 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0046s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+1 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0611s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000981s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2015-11-23T00:26:44+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = '玩玩玩' AND `coinLocation` = '宿舍' AND `coinNum` = 4 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','玩玩玩','宿舍','4','8:30~9:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = '玩玩玩' AND `coinLocation` = '宿舍' AND `coinNum` = 5 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0012s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','玩玩玩','宿舍','5','9:00~9:30') [ RunTime:0.0008s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = '玩玩玩' AND `coinLocation` = '宿舍' AND `coinNum` = 6 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0020s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','玩玩玩','宿舍','6','9:30~10:00') [ RunTime:0.0008s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = '玩玩玩' AND `coinLocation` = '宿舍' AND `coinNum` = 7 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0021s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','玩玩玩','宿舍','7','10:00~10:30') [ RunTime:0.0014s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = '玩玩玩' AND `coinLocation` = '宿舍' AND `coinNum` = 8 AND `timeSlot` = '10:30~11:00' LIMIT 1   [ RunTime:0.0014s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','玩玩玩','宿舍','8','10:30~11:00') [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = '玩玩玩' AND `coinLocation` = '宿舍' AND `coinNum` = 9 AND `timeSlot` = '11:00~11:30' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','玩玩玩','宿舍','9','11:00~11:30') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `coin_record` SET `guiltFreePlay`=guiltFreePlay+6 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0033s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+6 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003076s ]
+
+[ 2015-11-23T00:32:55+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014495s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001399s ]
+
+[ 2015-11-23T00:32:57+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:33:23+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:33:48+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001691s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 5 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 6 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 8 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 9 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `coin_record` SET `guiltFreePlay`=guiltFreePlay+0 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0034s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+0 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2015-11-23T00:35:42+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001456s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000911s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2015-11-23T00:35:44+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001639s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:35:48+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001852s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-11-23T00:36:05+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 5 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 6 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 7 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 8 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinNum` = 9 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `coin_record` SET `guiltFreePlay`=guiltFreePlay+0 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0032s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+0 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001112s ]
+
+[ 2015-11-23T00:37:30+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2015-11-23T00:37:32+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001728s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:37:36+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002020s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-11-23T00:37:46+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001871s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 0 AND `timeSlot` = '8:30~9:00' LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','0','8:30~9:00') [ RunTime:0.0008s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 1 AND `timeSlot` = '9:00~9:30' LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','1','9:00~9:30') [ RunTime:0.0008s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 2 AND `timeSlot` = '9:30~10:00' LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','2','9:30~10:00') [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 3 AND `timeSlot` = '10:00~10:30' LIMIT 1   [ RunTime:0.0034s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','3','10:00~10:30') [ RunTime:0.0010s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 4 AND `timeSlot` = '10:30~11:00' LIMIT 1   [ RunTime:0.0011s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','4','10:30~11:00') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 5 AND `timeSlot` = '11:00~11:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','5','11:00~11:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 6 AND `timeSlot` = '11:30~12:00' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','6','11:30~12:00') [ RunTime:0.0007s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 7 AND `timeSlot` = '12:00~12:30' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','7','12:00~12:30') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 8 AND `timeSlot` = '12:30~13:00' LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','8','12:30~13:00') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinType` = 'l' AND `coinDes` = 'wanwanasdfgadgsadgas' AND `coinLocation` = 'sdgasdg' AND `coinNum` = 9 AND `timeSlot` = '13:00~13:30' LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','wanwanasdfgadgsadgas','sdgasdg','9','13:00~13:30') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `coin_record` SET `guiltFreePlay`=guiltFreePlay+10 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0045s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+10 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.1520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003487s ]
+
+[ 2015-11-23T00:41:23+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/recordToday?opid=oXOWrwtvdXOTEk8_QnxxC23rQxvY
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001604s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014916s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001532s ]
+
+[ 2015-11-23T00:41:25+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001909s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015/11/23' ORDER BY coinNum asc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015/11/23' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-11-23T00:41:28+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/getCoinInformationByJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002276s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' ORDER BY coinNum asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `coin_record` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `coinDate` = '2015-11-21' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2015-11-23T00:41:42+08:00 ] ::1 /wyu34coin/1/index.php/Home/User/receiveCoinText
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `coin_information` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinNum` = 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','网玩玩','按时到岗','4','8:30~9:00') [ RunTime:0.0092s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinNum` = 5 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinNum` = 6 LIMIT 1   [ RunTime:0.0012s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','网玩玩','按时到岗','6','9:30~10:00') [ RunTime:0.0015s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinNum` = 7 LIMIT 1   [ RunTime:0.0013s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','网玩玩','按时到岗','7','10:00~10:30') [ RunTime:0.0006s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinNum` = 8 LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `coin_information` WHERE `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' AND `date` = '2015-11-21' AND `coinNum` = 9 LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `coin_information` (`opid`,`date`,`coinType`,`coinDes`,`coinLocation`,`coinNum`,`timeSlot`) VALUES ('oXOWrwtvdXOTEk8_QnxxC23rQxvY','2015-11-21','l','网玩玩','按时到岗','9','11:00~11:30') [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `coin_record` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `coin_record` WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `coin_record` SET `guiltFreePlay`=guiltFreePlay+4 WHERE `coinDate` = '2015-11-21' AND `opid` = 'oXOWrwtvdXOTEk8_QnxxC23rQxvY' [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `coin_user` [ RunTime:0.0033s ]
+SQL: UPDATE `coin_user` SET `coinNumber`=coinNumber+4 WHERE ( opid="oXOWrwtvdXOTEk8_QnxxC23rQxvY" ) [ RunTime:0.0620s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001187s ]
+

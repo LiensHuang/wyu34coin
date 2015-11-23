@@ -219,6 +219,7 @@ use Weixin\NewsResponseItem;
 		}
      
 	 }
+
     /**
      * 收到文本消息时触发，回复收到的文本消息内容
      *
@@ -239,11 +240,11 @@ use Weixin\NewsResponseItem;
 		   		$this->responseText($replyContent);
 		   		break;
 			case '时间类型有误':
-		   	    $replyContent="指令输入有误噢(时间类型)！";
+		   	    $replyContent="指令输入有误噢(时间类型)！\n回复“记录”查看记录指令！";
 		   		$this->responseText($replyContent);
 		   		break;
 			case '记录时间已过':
-		   	    $replyContent="主人，小的已睡，到点了再帮您记录啦！";
+		   	    $replyContent="主人，小的已睡，到点了再帮您记录啦！\n你也可以回复其他关键字，登陆主页，去记录未记录完成的日期噢^_^";
 		   		$this->responseText($replyContent);
 		   		break;	
 			case '二次记录提醒':
@@ -336,7 +337,8 @@ use Weixin\NewsResponseItem;
 				  "记下你发的图片了噢！",        // 图文消息标题
 				  "生活相册",  // 图文消息描述
 				  "http://ww3.sinaimg.cn/bmiddle/e3ab1e9bgw1extlqsftbxj20sg0ivag0.jpg",       // 图片链接
-				  " "           // 点击图文消息跳转链接
+				  //"http://wyu34coin.sinaapp.com/index.php/Home/User/picture?opid=".$this->getRequest('FromUserName')."&picurl=".$this->getRequest('picurl').""           // 点击图文消息跳转链接
+				$this->getRequest('picurl')
 				);
 				$this->responseNews($items);
 //    $items = array(

@@ -59,9 +59,10 @@
 	       	   //设置textarea、input为只读属性
 		        $("div[data-role=collapsible]:eq("+numArr[x]+") textarea").removeAttr("readOnly");
 		        $("div[data-role=collapsible]:eq("+numArr[x]+") input:eq(0)").removeAttr("readOnly");
-	            //移除按钮
+	            //还原按钮
 	            $("div[data-role=collapsible]:eq("+numArr[x]+") div[id=btn]").css("display","block");
-	            
+	            //还原结束时间选择
+	            $("div[data-role=collapsible]:eq("+numArr[x]+") fieldset").css("display","block");
 	            $("textarea[name=coinDayDes]").val(""); //清空今日小结
 	            $("textarea[name=coinDayDes]").removeAttr("readOnly");
 		}
@@ -74,7 +75,7 @@
   	       },  	     
   	       function(data){	       	      
   	       	var num;
-  	       	var coinNum=new Array();  //用于储存被记录过得时段的号数
+  	       	var coinNum=new Array();  //用于储存被记录过的时段的号数
   	       	var length=data.length; 	       
   	        for (var x in data) {
   	             num=data[x].coinnum-1;
@@ -89,6 +90,7 @@
 		        $("div[data-role=collapsible]:eq("+num+") input:eq(0)").attr("readOnly","true");
 	            //移除按钮
 	            $("div[data-role=collapsible]:eq("+num+") div[id=btn]").css("display","none");
+  	            $("div[data-role=collapsible]:eq("+num+") fieldset").css("display","none");
   	        }
   	        if(data[length-1]){
   	        	$("textarea[name=coinDayDes]").val(data[length-1]); //添加今日小结到小结框中
@@ -134,7 +136,7 @@
         }          
     
     //jquery mobile comfirm函数   
-    function isSubmit(num,theme,formData) {
+    function isSubmit(num,theme,formData,$endTimeSlotNum) {
       var popupDialogId = 'popupDialog';
      $('<div data-role="popup" id="' + popupDialogId + '" data-confirmed="no" data-transition="pop" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="min-width:216px;max-width:500px;"> \
                       \
@@ -158,31 +160,41 @@
    	     	 	formData
    	     	 
    	     	    );
-     	      	 //点击时间分类按钮时触发，关闭打开的折叠框。
-				//第一个collapsible要加上类ui-first-child
-   	      	 if (num==0) {
-					$("div[data-role=collapsible]").eq(num).attr("class","ui-collapsible ui-collapsible-inset ui-collapsible-collapsed ui-first-child");
-				}else{
-					$("div[data-role=collapsible]").eq(num).attr("class","ui-collapsible ui-collapsible-inset ui-collapsible-collapsed");
-				}				
-		        $("div#coin div[data-role=collapsible]:eq("+num+") h1").attr("class","ui-collapsible-heading ui-li-heading ui-collapsible-heading-collapsed");   
-		        $("div#coin div[data-role=collapsible]:eq("+num+") div[class=ui-collapsible-content]").attr(
-		        	{"class":"ui-collapsible-content ui-collapsible-content-collapsed",
-		        	 "aria-hidden":"true"
-		        	});
-		        	
-		        //设置对应的主题，添加对应的类,对应改变可折叠按钮的颜色。
-		        $("div[data-role=collapsible]").eq(num).attr("data-theme",""+theme+"");
-		        $("div[data-role=collapsible]:eq("+num+") h1 a").attr("class","ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-"+theme+""); 
-		        $("div[data-role=collapsible]:eq("+num+") h1 a").attr("data-theme",""+theme+"");
-		        //改变图标，让“^”变成“v”
-		        $("div[data-role=collapsible]:eq("+num+") span[class=ui-btn-inner] span:eq(2)").attr("class","ui-icon ui-icon-shadow ui-icon-arrow-d"); 
-		        
-		        //设置textarea、input为只读属性
-		        $("div[data-role=collapsible]:eq("+num+") textarea").attr("readOnly","true");
-		        $("div[data-role=collapsible]:eq("+num+") input:eq(0)").attr("readOnly","true");
-            //移除按钮
-	            $("div[data-role=collapsible]:eq("+num+") div[id=btn]").remove();
+   	     	    
+   	     	    for (var i=num;i<=$endTimeSlotNum;i++) {
+   	     	    	var $dataTheme=$("div[data-role=collapsible]:eq("+i+") h1 a").attr("data-theme");
+                   
+                    if ($dataTheme!="c") {
+                    	continue;
+                    }
+		   	     	     //点击时间分类按钮时触发，关闭打开的折叠框。
+						//第一个collapsible要加上类ui-first-child
+		   	      	  if (i==0) {
+							$("div[data-role=collapsible]").eq(i).attr("class","ui-collapsible ui-collapsible-inset ui-collapsible-collapsed ui-first-child");
+						}else{
+							$("div[data-role=collapsible]").eq(i).attr("class","ui-collapsible ui-collapsible-inset ui-collapsible-collapsed");
+						}				
+				        $("div#coin div[data-role=collapsible]:eq("+i+") h1").attr("class","ui-collapsible-heading ui-li-heading ui-collapsible-heading-collapsed");   
+				        $("div#coin div[data-role=collapsible]:eq("+i+") div[class=ui-collapsible-content]").attr(
+				        	{"class":"ui-collapsible-content ui-collapsible-content-collapsed",
+				        	 "aria-hidden":"true"
+				        	});
+				        	
+				        //设置对应的主题，添加对应的类,对应改变可折叠按钮的颜色。
+				        $("div[data-role=collapsible]").eq(i).attr("data-theme",""+theme+"");
+				        $("div[data-role=collapsible]:eq("+i+") h1 a").attr("class","ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-up-"+theme+""); 
+				        $("div[data-role=collapsible]:eq("+i+") h1 a").attr("data-theme",""+theme+"");
+				        //改变图标，让“^”变成“v”
+				        $("div[data-role=collapsible]:eq("+i+") span[class=ui-btn-inner] span:eq(2)").attr("class","ui-icon ui-icon-shadow ui-icon-arrow-d"); 
+				        
+				        //设置textarea、input为只读属性
+				        $("div[data-role=collapsible]:eq("+i+") textarea").attr("readOnly","true");
+				        $("div[data-role=collapsible]:eq("+i+") input:eq(0)").attr("readOnly","true");
+		                //移除按钮
+			            $("div[data-role=collapsible]:eq("+i+") div[id=btn]").remove();
+			            $("div[data-role=collapsible]:eq("+i+")  fieldset").remove();//移除结束时段选择
+   	     	    }
+     	    
              }
          }
      });
@@ -194,8 +206,7 @@
     
     //js 开始执行    
    $(document).ready(function() {
-     // jQuery.mobile.ajaxEnabled = false; 
-        					
+     // jQuery.mobile.ajaxEnabled = false;        					
 		//表单提交 ，完善信息
            $("#submit").click(function(){     
                 var formData = $("#renewForm").serialize();                 
@@ -210,37 +221,75 @@
                 });      
                 return false;  
             });  
-    //循环打印出金币
+      //循环打印出金币
      for(var i=0;i<=16;i++){
-     	 var j=i+7;
-         var k=j+1;
-         var n,m;
-         var key1,key2;
-         n=i*2;
-         m=n+1;
-            
-     	$("div#coin").append("<div id='collapsible' data-role='collapsible' data-collapsed='true' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>"+
-     	"<h1>"+j+":00~"+j+":30</h1><form id='"+n+"' action='/wyu34coin/1/index.php/Home/User/receiveCoinText' method='post'><textarea name='coinDes' placeholder='我在做些什么呢……'></textarea><input name='coinLocation' placeholder='地点'/><input type='hidden' name='opid' value='<?php echo ($opid); ?>'/></form>"+
-     	"<div id='btn'><button id='submitCoinText' value='"+n+"' data-inline = 'true' type='l' data-theme='l'>开心的玩</button>"+
-		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='m'          data-theme='m'>休息</button>"+
-		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='n' data-theme='n'>工作/学习</button>"+
-		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='o'   data-theme='o'>被迫忙活</button>"+
-		"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='p' data-theme='p'>拖延/浪费</button>"+
-     	"</div></div>");
-     	$("div#coin").append("<div id='collapsible' data-role='collapsible'  data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>"+
-     	"<h1>"+j+":30~"+k+":00</h1><form id='"+m+"' action='/wyu34coin/1/index.php/Home/User/receiveCoinText' method='post'><textarea name='coinDes' placeholder='我在做些什么呢……'></textarea><input name='coinLocation' placeholder='地点'/><input type='hidden' name='opid' value='<?php echo ($opid); ?>'/></form>"+
-     	"<div id='btn'><button id='submitCoinText' value='"+m+"' data-inline = 'true' type='l' data-theme='l'>开心的玩</button>"+
-		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='m'          data-theme='m'>休息</button>"+
-		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='n' data-theme='n'>工作/学习</button>"+
-		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='o'   data-theme='o'>被迫忙活</button>"+
-		"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='p' data-theme='p'>拖延/浪费</button>"+
-     	"</div></div>");
+	     	 var j=i+7;
+	         var k=j+1;
+	         var n,m;
+	         n=i*2;
+	         m=n+1;
+	            
+	     	$("div#coin").append("<div id='collapsible' data-role='collapsible' data-collapsed='true' data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>"+
+			     	"<h1>"+j+":00~"+j+":30</h1><form id='"+n+"' action='/wyu34coin/1/index.php/Home/User/receiveCoinText' method='post'><textarea name='coinDes' placeholder='我在做些什么呢……'></textarea><input name='coinLocation' placeholder='地点'/><input type='hidden' name='opid' value='<?php echo ($opid); ?>'/>"+
+			     	"<fieldset data-role='fieldcontain' id='"+n+"'>"+            
+			        "<select name='"+n+"' id='"+n+"'>"+
+			        "<option value='NULL'>结束时段选择</option>"+
+			        "</select>"+
+			        "</fieldset></form>"+
+			     	"<div id='btn'><button id='submitCoinText' value='"+n+"' data-inline = 'true' type='l' data-theme='l'>开心的玩</button>"+
+					"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='m'          data-theme='m'>休息时间</button>"+
+					"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='n' data-theme='n'>工作/学习</button>"+
+					"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='o'   data-theme='o'>被迫忙活</button>"+
+					"<button id='submitCoinText' value='"+n+"' data-inline = 'true' type='p' data-theme='p'>拖延/浪费</button>"+
+			     	"</div></div>");
+	     	
+	      	//for循环打印出偶数时段（n=0、2、4、6……32）的对应的结束时间段（提供用户选择）
+	     	for(var p=i;p<((32)/2);p++){
+	     		var startTime=p+7;
+	            var endTime=startTime+1;
+	            var num1=2*p+1;
+	            var num2=num1+1;
+	     	        $("fieldset#"+n+" select").append("<option value='"+num1+"'>"+startTime+":30~"+endTime+":00</option>");
+	     			$("fieldset#"+n+" select").append("<option value='"+num2+"'>"+endTime+":00~"+endTime+":30</option>");    	    		   		
+	     	}
+	     	//添加23:30-24:00的时段选择
+	     	$("fieldset#"+n+" select").append("<option value='33'>23:30~24:00</option>"); 
+	     	
+	     	
+	     	$("div#coin").append("<div id='collapsible' data-role='collapsible'  data-collapsed-icon='arrow-d' data-expanded-icon='arrow-u'>"+
+			     	"<h1>"+j+":30~"+k+":00</h1><form id='"+m+"' action='/wyu34coin/1/index.php/Home/User/receiveCoinText' method='post'><textarea name='coinDes' placeholder='我在做些什么呢……'></textarea><input name='coinLocation' placeholder='地点'/><input type='hidden' name='opid' value='<?php echo ($opid); ?>'/>"+
+			     	"<fieldset data-role='fieldcontain' id='"+m+"'>"+ 
+			     	"<select name='"+m+"' id='"+m+"'>"+  
+			     	"<option value='NULL'>结束时段选择</option>"+
+			        "</select>"+
+			        "</fieldset></form>"+
+			     	"<div id='btn'><button id='submitCoinText' value='"+m+"' data-inline = 'true' type='l' data-theme='l'>开心的玩</button>"+
+					"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='m' data-theme='m'>休息时间</button>"+
+					"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='n' data-theme='n'>工作/学习</button>"+
+					"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='o'   data-theme='o'>被迫忙活</button>"+
+					"<button id='submitCoinText' value='"+m+"' data-inline = 'true' type='p' data-theme='p'>拖延/浪费</button>"+
+			     	"</div></div>");
+	     	
+	     	//for循环打印出技术时段（m=1、2、5、7……31）的对应的结束时间段（提供用户选择）
+	     	for(var p=i;p<16;p++){
+	     		var startTime=p+8;
+	            var endTime=startTime+1;    
+	             var num1=2*p+2;
+	            var num2=num1+1;
+	            	$("fieldset#"+m+" select").append("<option value='"+num1+"'>"+startTime+":00~"+startTime+":30</option>"); 
+	     			$("fieldset#"+m+" select").append("<option value='"+num2+"'>"+startTime+":30~"+endTime+":00</option>");            		
+	     	} 
+     	
       }
-         
-   addRecord();  //添加记录样式
+     
+     //删除23:00-24:00的结束时间段选择，因为这是最后一个时间段了
+     $("fieldset#33 select").remove();	     	 
+     
+     addRecord();  //添加记录样式
     //用户点击时间分类按钮是触发
    $("button#submitCoinText").click(function(){
    	             var num=$(this).val();     //num表示第几个折叠框
+   	             //var num2=$(this).attr("value");
    	             var $coinDes,$coinLocation;
    	             var theme=$(this).attr("data-theme"); //获取对应的主题
 			   	     
@@ -249,13 +298,18 @@
    	            var $coinAttr=$("div[data-role=collapsible]:eq("+num+") textarea").attr("readOnly"); 
                  //获取时间段
                 var $timeSlot=$("div[data-role=collapsible]:eq("+num+") h1").text();
-                var $date=$("span#nowRecord").text();            
+                var $endTimeSlotNum=$("select#"+num+"  option:selected").val();  //获取用户选择的结束时段的序号
+                //alert(num+"--"+num2+"--"+$endTimeSlotNum);
+                //return;
+                var $date=$("span#nowRecord").text();  
+                
    	             if ($coinDes&&$coinLocation&&$coinAttr!="readonly") {	   	             	
 	   	             		var coinType=$(this).attr("type");    //获取金币的类型
 					     	 var formData = $("#"+num+"").serialize();  //获取某个折叠框内金币表单的序列化值（包括coinText,location,opid）
-					   	     var typeKey=parseInt(num)+1;
-					   	     formData=formData+"&coinType="+coinType+"&coinNum="+typeKey+"&timeSlot="+$timeSlot+"&date="+$date;	   	     
-					   	     isSubmit(num,theme,formData);  //判断是否要提交金币内容	
+					   	     var typeKey=parseInt(num)+1;    //nun加一，因为在页面中，num是从0开始的
+					   	     var endNum=parseInt($endTimeSlotNum)+1;    //nun加一，因为在页面中，num是从0开始的
+					   	     formData=formData+"&coinType="+coinType+"&startNum="+typeKey+"&timeSlot="+$timeSlot+"&date="+$date+"&endNum="+endNum;	   	     
+					   	     isSubmit(num,theme,formData,$endTimeSlotNum);  //判断是否要提交金币内容	
  	             } else{
  	             	return false;
  	             }		   	    
